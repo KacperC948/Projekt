@@ -23,7 +23,7 @@
 int main(int, char const**)
 {
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Test2");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Test2123");
 //inny test
     // Set the Icon
     sf::Image icon;
