@@ -1,4 +1,3 @@
-////////////////////////////////////////////////////////////
 //
 // SFML - Simple and Fast Multimedia Library
 // Copyright (C) 2007-2018 Marco Antognini (antognini.marco@gmail.com),

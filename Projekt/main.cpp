@@ -20,23 +20,21 @@
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
 
-//bardzo duze zmiany w pliku
-
-int main(int, char const**)
+int main()
 {
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Test2123");
-//inny test
+    sf::RenderWindow window(sf::VideoMode(1500, 1000), "Space Invaders");
+
     // Set the Icon
     sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
+    if (!icon.loadFromFile(resourcePath() + "logo.png")) {
         return EXIT_FAILURE;
     }
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "cute_image.jpg")) {
+    if (!texture.loadFromFile(resourcePath() + "space-invader.png")) {
         return EXIT_FAILURE;
     }
     sf::Sprite sprite(texture);
@@ -46,12 +44,12 @@ int main(int, char const**)
     if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
         return EXIT_FAILURE;
     }
-    sf::Text text("Hello SFML", font, 50);
-    text.setFillColor(sf::Color::Black);
+    sf::Text text("Space Invaders", font, 50);
+    text.setFillColor(sf::Color::White);
 
     // Load a music to play
     sf::Music music;
-    if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
+    if (!music.openFromFile(resourcePath() + "player-1-space-invaders-single-1979.ogg")) {
         return EXIT_FAILURE;
     }
 
