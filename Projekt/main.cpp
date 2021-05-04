@@ -20,6 +20,8 @@
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
 
+//bardzo duze zmiany w pliku
+
 int main(int, char const**)
 {
     // Create the main window
