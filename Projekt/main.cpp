@@ -84,14 +84,22 @@ int main()
                         menu.MoveDown();
                         break;
                     case sf::Keyboard::Return:
-                        cout << "test";
-                        break;
-                    default:
-                        break;
+                        switch (menu.getPressedItem()) {
+                            case 0:
+                                cout << "Play button has been pressed" << endl;
+                                break;
+                            case 1:
+                                cout << "Option button has been pressed" << endl;
+                                break;
+                            case 2:
+                                window.close();
+                                break;
+                            }
+                            break;
                 }
             }
         }
-
+        
         // Clear screen
         window.clear();
         

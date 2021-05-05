@@ -28,6 +28,7 @@ public:
     void draw(RenderWindow &window);
     void MoveUp();
     void MoveDown();
+    int getPressedItem() {return selectedItemIndex;}
 private:
     int selectedItemIndex;
     sf::Font font;
