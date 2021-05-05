@@ -65,3 +65,4 @@ void Menu::MoveDown()
         menu[selectedItemIndex].setColor(sf::Color::Red);
     }
 }
+

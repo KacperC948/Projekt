@@ -14,6 +14,7 @@
 		1833FB342641F98100263A99 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1833FB332641F98100263A99 /* sansation.ttf */; };
 		1833FB372641F99B00263A99 /* player-1-space-invaders-single-1979.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 1833FB362641F99B00263A99 /* player-1-space-invaders-single-1979.ogg */; };
 		1833FB432642AFF600263A99 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1833FB412642AFF600263A99 /* Menu.cpp */; };
+		90B892DB2642BCAE00614A56 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B892D92642BCAE00614A56 /* Options.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		1833FB362641F99B00263A99 /* player-1-space-invaders-single-1979.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "player-1-space-invaders-single-1979.ogg"; sourceTree = "<group>"; };
 		1833FB412642AFF600263A99 /* Menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		1833FB422642AFF600263A99 /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
+		90B892D92642BCAE00614A56 /* Options.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Options.cpp; sourceTree = "<group>"; };
+		90B892DA2642BCAE00614A56 /* Options.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Options.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				1833FB142641918000263A99 /* main.cpp */,
 				1833FB412642AFF600263A99 /* Menu.cpp */,
 				1833FB422642AFF600263A99 /* Menu.hpp */,
+				90B892D92642BCAE00614A56 /* Options.cpp */,
+				90B892DA2642BCAE00614A56 /* Options.hpp */,
 				1833FB0F2641918000263A99 /* Supporting Files */,
 			);
 			path = Projekt;
@@ -182,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B892DB2642BCAE00614A56 /* Options.cpp in Sources */,
 				1833FB432642AFF600263A99 /* Menu.cpp in Sources */,
 				1833FB152641918000263A99 /* main.cpp in Sources */,
 				1833FB122641918000263A99 /* ResourcePath.mm in Sources */,

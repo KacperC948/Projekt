@@ -20,6 +20,7 @@
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
 #include "Menu.hpp"
+#include "Options.hpp"
 
 int main()
 {
@@ -27,6 +28,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(600, 600), "Space Invaders");
     
     Menu menu(window.getSize().x, window.getSize().y);
+    Options options(window.getSize().x, window.getSize().y);
     
 //    // Set the Icon
 //    sf::Image icon;
@@ -58,7 +60,7 @@ int main()
 //
 //    // Play the music
 //    music.play();
-    
+    int choice = 0;
     // Start the game loop
     while (window.isOpen())
     {
@@ -87,10 +89,15 @@ int main()
                         switch (menu.getPressedItem()) {
                             case 0:
                                 cout << "Play button has been pressed" << endl;
+                                choice = menu.getPressedItem();
                                 break;
-                            case 1:
+                            case 1: {
                                 cout << "Option button has been pressed" << endl;
+                                choice = menu.getPressedItem();
+//                                options.draw(window);
+//                                window.display();
                                 break;
+                            }
                             case 2:
                                 window.close();
                                 break;
@@ -98,13 +105,14 @@ int main()
                             break;
                 }
             }
+            //menu.isSelected(event);
         }
         
         // Clear screen
         window.clear();
-        
+
         menu.draw(window);
-        
+
 //        // Draw the sprite
 //        window.draw(sprite);
 //
