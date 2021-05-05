@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "ResourcePath.hpp"
 
 const int MAX_NUMBER_OF_ITEMS = 3;
 

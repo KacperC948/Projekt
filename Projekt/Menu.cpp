@@ -10,14 +10,14 @@
 
 Menu::Menu(float width, float height)
 {
-    if (!font.loadFromFile("arial.ttf"))
+    if (!font.loadFromFile(resourcePath() + "sansation.ttf"))
     {
         // handle error
     }
 
     menu[0].setFont(font);
     menu[0].setColor(sf::Color::Red);
-    menu[0].setString("Play");
+    menu[0].setString("Test");
     menu[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
 
     menu[1].setFont(font);

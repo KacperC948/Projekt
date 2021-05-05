@@ -75,6 +75,21 @@ int main()
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            if (event.type==sf::Event::KeyReleased) {
+                switch (event.key.code) {
+                    case sf::Keyboard::Up:
+                        menu.MoveUp();
+                        break;
+                    case sf::Keyboard::Down:
+                        menu.MoveDown();
+                        break;
+                    case sf::Keyboard::Return:
+                        cout << "test";
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         // Clear screen
