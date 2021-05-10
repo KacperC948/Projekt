@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1808F35326493DBC000B79C9 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1808F35126493DBC000B79C9 /* Game.cpp */; };
+		1808F35726494AB7000B79C9 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1808F35526494AB7000B79C9 /* State.cpp */; };
 		1833FB122641918000263A99 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1833FB112641918000263A99 /* ResourcePath.mm */; };
 		1833FB152641918000263A99 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1833FB142641918000263A99 /* main.cpp */; };
 		1833FB2D2641F88F00263A99 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1833FB2C2641F88F00263A99 /* logo.png */; };
@@ -18,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1808F35126493DBC000B79C9 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		1808F35226493DBC000B79C9 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		1808F35526494AB7000B79C9 /* State.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		1808F35626494AB7000B79C9 /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		1833FB0C2641918000263A99 /* Projekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projekt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1833FB102641918000263A99 /* Projekt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Projekt-Info.plist"; path = "../Projekt-Info.plist"; sourceTree = "<group>"; };
 		1833FB112641918000263A99 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ResourcePath.mm; path = Projekt/ResourcePath.mm; sourceTree = SOURCE_ROOT; };
@@ -67,8 +73,12 @@
 				1833FB112641918000263A99 /* ResourcePath.mm */,
 				1833FB132641918000263A99 /* ResourcePath.hpp */,
 				1833FB142641918000263A99 /* main.cpp */,
+				1808F35126493DBC000B79C9 /* Game.cpp */,
+				1808F35226493DBC000B79C9 /* Game.hpp */,
 				1833FB412642AFF600263A99 /* Menu.cpp */,
 				1833FB422642AFF600263A99 /* Menu.hpp */,
+				1808F35526494AB7000B79C9 /* State.cpp */,
+				1808F35626494AB7000B79C9 /* State.hpp */,
 				90B892D92642BCAE00614A56 /* Options.cpp */,
 				90B892DA2642BCAE00614A56 /* Options.hpp */,
 				1833FB0F2641918000263A99 /* Supporting Files */,
@@ -191,6 +201,8 @@
 				1833FB432642AFF600263A99 /* Menu.cpp in Sources */,
 				1833FB152641918000263A99 /* main.cpp in Sources */,
 				1833FB122641918000263A99 /* ResourcePath.mm in Sources */,
+				1808F35326493DBC000B79C9 /* Game.cpp in Sources */,
+				1808F35726494AB7000B79C9 /* State.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

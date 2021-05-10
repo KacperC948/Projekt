@@ -21,14 +21,22 @@
 #include "ResourcePath.hpp"
 #include "Menu.hpp"
 #include "Options.hpp"
+#include "Game.hpp"
 
 int main()
 {
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(600, 600), "Space Invaders");
+    //sf::RenderWindow window(sf::VideoMode(600, 600), "Space Invaders");
     
-    Menu menu(window.getSize().x, window.getSize().y);
-    Options options(window.getSize().x, window.getSize().y);
+    Game game;
+    
+    while(game.running()){
+        game.update();
+        game.render();
+    }
+    
+    //Menu menu(window.getSize().x, window.getSize().y);
+    //Options options(window.getSize().x, window.getSize().y);
     
 //    // Set the Icon
 //    sf::Image icon;
@@ -60,58 +68,58 @@ int main()
 //
 //    // Play the music
 //    music.play();
-    int choice = 0;
-    // Start the game loop
-    while (window.isOpen())
-    {
-        // Process events
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            // Close window: exit
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-
-            // Escape pressed: exit
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-                window.close();
-            }
-            if (event.type==sf::Event::KeyReleased) {
-                switch (event.key.code) {
-                    case sf::Keyboard::Up:
-                        menu.MoveUp();
-                        break;
-                    case sf::Keyboard::Down:
-                        menu.MoveDown();
-                        break;
-                    case sf::Keyboard::Return:
-                        switch (menu.getPressedItem()) {
-                            case 0:
-                                cout << "Play button has been pressed" << endl;
-                                choice = menu.getPressedItem();
-                                break;
-                            case 1: {
-                                cout << "Option button has been pressed" << endl;
-                                choice = menu.getPressedItem();
-//                                options.draw(window);
-//                                window.display();
-                                break;
-                            }
-                            case 2:
-                                window.close();
-                                break;
-                            }
-                            break;
-                }
-            }
-            //menu.isSelected(event);
-        }
+//    int choice = 0;
+//    // Start the game loop
+//    while (game.running())
+//    {
+//        // Process events
+//        sf::Event event;
+//        while (window.pollEvent(event))
+//        {
+//            // Close window: exit
+//            if (event.type == sf::Event::Closed) {
+//                window.close();
+//            }
+//
+//            // Escape pressed: exit
+//            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
+//                window.close();
+//            }
+//            if (event.type==sf::Event::KeyReleased) {
+//                switch (event.key.code) {
+//                    case sf::Keyboard::Up:
+//                        menu.MoveUp();
+//                        break;
+//                    case sf::Keyboard::Down:
+//                        menu.MoveDown();
+//                        break;
+//                    case sf::Keyboard::Return:
+//                        switch (menu.getPressedItem()) {
+//                            case 0:
+//                                cout << "Play button has been pressed" << endl;
+//                                choice = menu.getPressedItem();
+//                                break;
+//                            case 1: {
+//                                cout << "Option button has been pressed" << endl;
+//                                choice = menu.getPressedItem();
+////                                options.draw(window);
+////                                window.display();
+//                                break;
+//                            }
+//                            case 2:
+//                                window.close();
+//                                break;
+//                            }
+//                            break;
+//                }
+//            }
+//            //menu.isSelected(event);
+//        }
         
         // Clear screen
-        window.clear();
+        //window.clear();
 
-        menu.draw(window);
+        //menu.draw(window);
 
 //        // Draw the sprite
 //        window.draw(sprite);
@@ -120,8 +128,8 @@ int main()
 //        window.draw(text);
 
         // Update the window
-        window.display();
-    }
+        //window.display();
+    
 
     return EXIT_SUCCESS;
 }
