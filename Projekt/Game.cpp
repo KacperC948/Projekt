@@ -22,6 +22,7 @@ Game::Game()
 {
     this->initVariables();
     this->initWindow();
+    this->initStates(); 
 }
 
 Game::~Game()
@@ -32,6 +33,11 @@ Game::~Game()
 const bool Game::running() const
 {
     return this->window->isOpen();
+    
+    while(!this->states.empty()){
+        delete this->states.top();
+        //this->states.pop();
+    }
 }
 
 void Game::pollEvents()
@@ -52,10 +58,30 @@ void Game::pollEvents()
 void Game::update()
 {
     pollEvents();
+    
+    if(!this->states.empty()){
+        this->states.top()->update();
+    }
 }
 
 void Game::render()
 {
-    this->window->clear(sf::Color(255,0,0,255));
+    //this->window->clear(sf::Color(255,0,0,255));
+    
+    if(!this->states.empty()){
+        this->states.top()->render();
+    }
+    
     this->window->display();
+}
+
+void Game::run(){
+    while(running()){
+        update();
+        render();
+    }
+}
+
+void Game::initStates(){
+    this->states.push(new Menu(this->window));
 }

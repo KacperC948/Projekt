@@ -30,10 +30,7 @@ int main()
     
     Game game;
     
-    while(game.running()){
-        game.update();
-        game.render();
-    }
+    game.run();
     
     //Menu menu(window.getSize().x, window.getSize().y);
     //Options options(window.getSize().x, window.getSize().y);

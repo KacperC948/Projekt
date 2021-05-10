@@ -10,29 +10,38 @@
 #define Menu_hpp
 //#define MAX_NUMBER_OF_ITEMS = 3;
 
-#include <stdio.h>
-#include <iostream>
-#include <SFML/Graphics.hpp>
-#include "ResourcePath.hpp"
+#include "State.hpp"
 
 const int MAX_NUMBER_OF_ITEMS = 3;
 
 using namespace std;
 using namespace sf;
 
-class Menu{
+class Menu : public State{
 public:
-    Menu(float width, float height);
+    Menu(sf::RenderWindow* window);
     ~Menu();
     
-    void draw(RenderWindow &window);
+    void drawText();
     void MoveUp();
     void MoveDown();
     int getPressedItem() {return selectedItemIndex;}
+    
+    
+    void initGui();
+    void keyboardInput();
+    void update();
+    void render(sf::RenderTarget* target=nullptr);
+    void endState();
 private:
     int selectedItemIndex;
     sf::Font font;
     sf::Text menu[MAX_NUMBER_OF_ITEMS];
+    
+    sf::Text text[3];
+    
+    
+    sf::RectangleShape background;
 
 };
 

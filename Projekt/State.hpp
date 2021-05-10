@@ -10,9 +10,25 @@
 #define State_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <stack>
+#include "ResourcePath.hpp"
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 
 class State{
+protected:
+    std::vector<sf::Texture> textures;
     
+    sf::RenderWindow* window;
+    
+public:
+    State(sf::RenderWindow* window);
+    virtual ~State();
+    
+    virtual void update() = 0;
+    virtual void render(sf::RenderTarget* target=nullptr) = 0;
+    virtual void endState() = 0;
 };
 
 #endif /* State_hpp */

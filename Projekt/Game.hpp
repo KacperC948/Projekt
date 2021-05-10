@@ -9,9 +9,8 @@
 #ifndef Game_hpp
 #define Game_hpp
 
-#include <stdio.h>
-#include <SFML/Audio.hpp>
-#include <SFML/Graphics.hpp>
+#include "State.hpp"
+#include "Menu.hpp"
 
 using namespace std;
 using namespace sf;
@@ -21,14 +20,18 @@ private:
     sf::RenderWindow* window;
     sf::Event ev;
     
+    std::stack<State*> states;
+    
     void initVariables();
     void initWindow();
+    void initStates();
 public:
     Game();
     virtual ~Game();
     
     const bool running() const;
     
+    void run();
     void pollEvents();
     void update();
     void render();
