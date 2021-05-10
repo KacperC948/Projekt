@@ -97,14 +97,17 @@ void Menu::MoveDown()
 }
 
 void Menu::update(){
-
+    keyboardInput();
+    
 //    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-//        this->MoveUp();
+//        MoveUp();
 //        cout << "test1" << endl;
+//        cout << selectedItemIndex;
 //    }
 //    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
 //        this->MoveDown();
 //        cout << "test2" << endl;
+//        cout << selectedItemIndex;
 //    }
 }
 
@@ -125,5 +128,21 @@ void Menu::endState(){
 }
 
 void Menu::keyboardInput(){
-
+    sf::Event e;
+    
+    while (this->window->pollEvent(e)) {
+        cout << "tesasdad";
+        switch (e.type) {
+            case sf::Event::KeyPressed:
+                if(e.key.code == sf::Keyboard::Up){
+                    cout << "gówno";
+                    MoveUp();
+                }
+                if(e.key.code == sf::Keyboard::Down){
+                    cout << "Dupa";
+                    MoveDown();
+                }
+                break;
+        }
+    }
 }
