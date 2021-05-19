@@ -85,5 +85,5 @@ void Game::run(){
 }
 
 void Game::initStates(){
-    this->states.push(new Menu(this->window));
+    this->states.push(new Options(this->window));
 }

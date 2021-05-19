@@ -11,6 +11,7 @@
 
 #include "State.hpp"
 #include "Menu.hpp"
+#include "Options.hpp"
 
 using namespace std;
 using namespace sf;

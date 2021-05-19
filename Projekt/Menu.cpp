@@ -150,10 +150,18 @@ void Menu::keyboardInput(){
                     if(e.key.code == sf::Keyboard::Up){
                         MoveUp();
                         cout << "gora";
+                        cout << selectedItemIndex << endl;
                     }
                     if(e.key.code == sf::Keyboard::Down){
                         MoveDown();
                         cout << "dol";
+                        cout << selectedItemIndex << endl;
+                    }
+                    if(e.key.code == sf::Keyboard::Return){
+                        cout << "enter";
+                        if(selectedItemIndex == 1){
+                            cout << "opcje" << endl;
+                        }
                     }
                     //return;
                     break;
