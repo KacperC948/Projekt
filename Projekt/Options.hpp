@@ -19,7 +19,7 @@ using namespace sf;
 
 class Options : public State{
 public:
-    Options(sf::RenderWindow* window);
+    Options(sf::RenderWindow* window, std::stack<State*>* states);
     ~Options();
     
     void drawText();

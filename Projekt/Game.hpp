@@ -26,6 +26,7 @@ private:
     void initVariables();
     void initWindow();
     void initStates();
+    
 public:
     Game();
     virtual ~Game();

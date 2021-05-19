@@ -9,7 +9,7 @@
 #include "Options.hpp"
 
 
-Options::Options(sf::RenderWindow* window) : State(window)
+Options::Options(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
 {
     this->initGui();
     selectedItemIndex = 0;
@@ -29,8 +29,8 @@ void Options::drawText()
 }
 
 void Options::initGui(){
-    int width = 400;
-    int height = 400;
+    int width = 600;
+    int height = 600;
     
     background.setSize(Vector2f(width, height));
     background.setFillColor(sf::Color::Yellow);
@@ -75,7 +75,7 @@ void Options::MoveDown()
 }
 
 void Options::update(){
-    //keyboardInput();
+    keyboardInput();
 }
 
 void Options::render(sf::RenderTarget* target){

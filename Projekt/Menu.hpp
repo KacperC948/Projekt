@@ -11,6 +11,7 @@
 //#define MAX_NUMBER_OF_ITEMS = 3;
 
 #include "State.hpp"
+#include "Options.hpp"
 
 const int MAX_NUMBER_OF_ITEMS = 3;
 
@@ -19,7 +20,7 @@ using namespace sf;
 
 class Menu : public State{
 public:
-    Menu(sf::RenderWindow* window);
+    Menu(sf::RenderWindow* window, std::stack<State*> *states);
     ~Menu();
     
     void drawText();

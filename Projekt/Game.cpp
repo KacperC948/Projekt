@@ -61,7 +61,7 @@ void Game::pollEvents()
 
 void Game::update()
 {
-    pollEvents();
+    //pollEvents();
     
     if(!this->states.empty()){
         this->states.top()->update();
@@ -87,6 +87,6 @@ void Game::run(){
 }
 
 void Game::initStates(){
-    this->states.push(new Menu(this->window));
-    this->states.push(new Options(this->window));
+    this->states.push(new Options(this->window, &this->states));
+    this->states.push(new Menu(this->window, &this->states));
 }

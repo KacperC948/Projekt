@@ -9,7 +9,7 @@
 #include "Menu.hpp"
 
 
-Menu::Menu(sf::RenderWindow* window) : State(window)
+Menu::Menu(sf::RenderWindow* window, std::stack<State*> *states) : State(window, states)
 {
     this->initGui();
     selectedItemIndex = 0;
@@ -29,8 +29,8 @@ void Menu::drawText()
 }
 
 void Menu::initGui(){
-    int width = 400;
-    int height = 400;
+    int width = 600;
+    int height = 600;
     
     background.setSize(Vector2f(width, height));
     background.setFillColor(sf::Color::Red);
@@ -75,7 +75,7 @@ void Menu::MoveDown()
 }
 
 void Menu::update(){
-    //keyboardInput();
+    keyboardInput();
 }
 
 void Menu::render(sf::RenderTarget* target){
@@ -138,7 +138,8 @@ void Menu::keyboardInput(){
                     if(e.key.code == sf::Keyboard::Return){
                         cout << "enter";
                         if(selectedItemIndex == 1){
-                            cout << "opcje" << endl;
+                            this->states->push(new Options(this->window, this->states));
+                            
                         }
                     }
                     //return;
@@ -147,7 +148,7 @@ void Menu::keyboardInput(){
             return;
             }
         //}
-     }
+     
     
-    
+    }
 }
