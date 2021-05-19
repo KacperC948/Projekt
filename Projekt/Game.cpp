@@ -50,8 +50,8 @@ void Game::pollEvents()
             case sf::Event::KeyPressed:
                 if(this->ev.key.code == sf::Keyboard::Escape)
                     this->window->close();
-                if(this->ev.key.code == sf::Keyboard::D)
-                    //ddcout << "test1231231";
+                if(this->ev.key.code == sf::Keyboard::Up)
+                    cout << "test1231231";
                 break;
         }
     }

@@ -97,7 +97,11 @@ void Menu::MoveDown()
 }
 
 void Menu::update(){
-    keyboardInput();
+    bool test2 = true;
+    
+        keyboardInput();
+    
+    
     
 //    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
 //        MoveUp();
@@ -129,20 +133,42 @@ void Menu::endState(){
 
 void Menu::keyboardInput(){
     sf::Event e;
+    bool test = true;
     
-    while (this->window->pollEvent(e)) {
-        cout << "tesasdad";
-        switch (e.type) {
-            case sf::Event::KeyPressed:
-                if(e.key.code == sf::Keyboard::Up){
-                    cout << "gówno";
-                    MoveUp();
-                }
-                if(e.key.code == sf::Keyboard::Down){
-                    cout << "Dupa";
-                    MoveDown();
-                }
-                break;
-        }
-    }
+    while(test){
+        while (this->window->pollEvent(e)){
+            //if(e.type == sf::Event::KeyReleased){
+//            switch (e.key.code) {
+//                case sf::Keyboard::Return: {
+//                    return;
+//                }
+//                    break;
+//                case sf::Keyboard::Up:{
+//                    cout << "teścik";
+//                    MoveUp();
+//                    return;
+//                }
+//                    break;
+//                case sf::Keyboard::Down:{
+//                    cout << "teścik2";
+//                    MoveDown();
+//                    return;
+//                }
+//                    break;
+            switch (e.type) {
+                case sf::Event::KeyPressed:
+                    if(e.key.code == sf::Keyboard::Escape){
+                        this->window->close();
+                        cout << "test";
+                    }
+                    break;
+                    
+                default:
+                    break;
+            }
+            }
+        //}
+     }
+    //}
+    
 }
