@@ -59,7 +59,7 @@ void Game::pollEvents()
 
 void Game::update()
 {
-    pollEvents();
+    //pollEvents();
     
     if(!this->states.empty()){
         this->states.top()->update();

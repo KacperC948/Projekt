@@ -97,34 +97,17 @@ void Menu::MoveDown()
 }
 
 void Menu::update(){
-    bool test2 = true;
-    
-        keyboardInput();
-    
-    
-    
-//    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-//        MoveUp();
-//        cout << "test1" << endl;
-//        cout << selectedItemIndex;
-//    }
-//    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-//        this->MoveDown();
-//        cout << "test2" << endl;
-//        cout << selectedItemIndex;
-//    }
+    keyboardInput();
 }
 
 void Menu::render(sf::RenderTarget* target){
     if(!target)
         target = this->window;
     
-    //draw(this->target);
     target->draw(this->background);
     for(int i = 0; i < 3; i++){
         target->draw(this->text[i]);
     }
-    //target->draw(this->text);
 }
 
 void Menu::endState(){
@@ -156,19 +139,29 @@ void Menu::keyboardInput(){
 //                }
 //                    break;
             switch (e.type) {
+                case sf::Event::Closed:
+                    this->window->close();
+                    break;
                 case sf::Event::KeyPressed:
                     if(e.key.code == sf::Keyboard::Escape){
                         this->window->close();
                         cout << "test";
                     }
-                    break;
-                    
-                default:
+                    if(e.key.code == sf::Keyboard::Up){
+                        MoveUp();
+                        cout << "gora";
+                    }
+                    if(e.key.code == sf::Keyboard::Down){
+                        MoveDown();
+                        cout << "dol";
+                    }
+                    //return;
                     break;
             }
+            return;
             }
         //}
      }
-    //}
+    
     
 }

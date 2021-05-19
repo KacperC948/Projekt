@@ -31,6 +31,7 @@ public:
     void initGui();
     void keyboardInput();
     void update();
+    void update(sf::Event ev);
     void render(sf::RenderTarget* target=nullptr);
     void endState();
 private:
