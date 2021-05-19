@@ -42,9 +42,8 @@ private:
     
     sf::Text text[3];
     
-    
     sf::RectangleShape background;
-
+    //sf::Sprite background;
 };
 
 #endif /* Menu_hpp */

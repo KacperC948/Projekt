@@ -21,7 +21,6 @@ protected:
     std::vector<sf::Texture> textures;
     std::stack<State*> *states;
     sf::RenderWindow* window;
-    //sf::Event* ev;
     
 public:
     State(sf::RenderWindow* window, std::stack<State*> *states);

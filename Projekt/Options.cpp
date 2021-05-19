@@ -8,16 +8,15 @@
 
 #include "Options.hpp"
 
-
 Options::Options(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
 {
     this->initGui();
     selectedItemIndex = 0;
 }
 
-
 Options::~Options()
 {
+    
 }
 
 void Options::drawText()
@@ -29,8 +28,8 @@ void Options::drawText()
 }
 
 void Options::initGui(){
-    int width = 600;
-    int height = 600;
+    int width = 1500;
+    int height = 1000;
     
     background.setSize(Vector2f(width, height));
     background.setFillColor(sf::Color::Yellow);
@@ -40,17 +39,17 @@ void Options::initGui(){
     }
     text[0].setFont(font);
     text[0].setColor(sf::Color::Blue);
-    text[0].setString("Test");
+    text[0].setString("Difficulty");
     text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 1));
     
     text[1].setFont(font);
     text[1].setColor(sf::Color::Blue);
-    text[1].setString("Test2");
+    text[1].setString("Video mode");
     text[1].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 2));
 
     text[2].setFont(font);
     text[2].setColor(sf::Color::Blue);
-    text[2].setString("Test3");
+    text[2].setString("Return");
     text[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 3));
 }
 
@@ -58,19 +57,19 @@ void Options::MoveUp()
 {
     if (selectedItemIndex - 1 >= 0)
     {
-        text[selectedItemIndex].setColor(sf::Color::White);
-        selectedItemIndex--;
         text[selectedItemIndex].setColor(sf::Color::Blue);
+        selectedItemIndex--;
+        text[selectedItemIndex].setColor(sf::Color::White);
     }
 }
-//
+
 void Options::MoveDown()
 {
     if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS2)
     {
-        text[selectedItemIndex].setColor(sf::Color::White);
-        selectedItemIndex++;
         text[selectedItemIndex].setColor(sf::Color::Blue);
+        selectedItemIndex++;
+        text[selectedItemIndex].setColor(sf::Color::White);
     }
 }
 
@@ -139,16 +138,17 @@ void Options::keyboardInput(){
                         cout << "enter";
                         if(selectedItemIndex == 1){
                             cout << "opcje" << endl;
-                        
                         }
+                        if(selectedItemIndex == 2){
+                            this->states->pop();
+                            cout << "opcje" << endl;
+                        }
+
                     }
                     //return;
                     break;
             }
             return;
-            }
-        //}
-     }
-    
-    
+        }
+    }
 }
