@@ -28,42 +28,48 @@ void Menu::drawText()
 }
 
 void Menu::initGui(){
-    int width = 1500;
-    int height = 1000;
+    int width = 600;
+    int height = 648;
     
-    sf::Texture texture;
-    texture.loadFromFile(resourcePath() + "space-invader.png");
+    //sf::Texture texture;
+    //texture.loadFromFile(resourcePath() + "menu.png");
     
     background.setSize(Vector2f(width, height));
     //background.setTexture(&texture);
     //background.setTextureRect(sf::IntRect(0,0,1500,100));
     //background.setFillColor(sf::Color(255,255,255,64));
-    background.setFillColor(sf::Color::Red);
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf"))
+    //background.setFillColor(sf::Color::Red);
+    //sf::Sprite sprite;
+    //sprite.setTexture(texture);
+    //this->window->draw(sprite);
+    if (!font.loadFromFile(resourcePath() + "space_invaders.ttf"))
     {
         // handle error
     }
     text[0].setFont(font);
-    text[0].setColor(sf::Color::Blue);
+    text[0].setColor(sf::Color::Green);
     text[0].setString("Start");
-    text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
+    text[0].setPosition(245, 300);
+    //text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
     
     text[1].setFont(font);
-    text[1].setColor(sf::Color::Blue);
+    text[1].setColor(sf::Color::Green);
     text[1].setString("Options");
-    text[1].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 2));
+    text[1].setPosition(230, 400);
+    //text[1].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 2));
 
     text[2].setFont(font);
-    text[2].setColor(sf::Color::Blue);
+    text[2].setColor(sf::Color::Green);
     text[2].setString("Exit");
-    text[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 3));
+    text[2].setPosition(260, 500);
+    //text[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 3));
 }
 
 void Menu::MoveUp()
 {
     if (selectedItemIndex - 1 >= 0)
     {
-        text[selectedItemIndex].setColor(sf::Color::Blue);
+        text[selectedItemIndex].setColor(sf::Color::Green);
         selectedItemIndex--;
         text[selectedItemIndex].setColor(sf::Color::White);
     }
@@ -73,7 +79,7 @@ void Menu::MoveDown()
 {
     if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS)
     {
-        text[selectedItemIndex].setColor(sf::Color::Blue);
+        text[selectedItemIndex].setColor(sf::Color::Green);
         selectedItemIndex++;
         text[selectedItemIndex].setColor(sf::Color::White);
     }
@@ -87,11 +93,17 @@ void Menu::render(sf::RenderTarget* target){
     if(!target)
         target = this->window;
     
-    target->draw(this->background);
+    sf::Texture texture;
+    texture.loadFromFile(resourcePath() + "menu.png");
+
+    sf::Sprite sprite;
+    sprite.setTexture(texture);
+    
+    this->window->draw(sprite);
+    //target->draw(this->background);
     for(int i = 0; i < 3; i++){
         target->draw(this->text[i]);
     }
-    //target->draw(sprite);
 }
 
 void Menu::endState(){

@@ -16,6 +16,8 @@
 		1833FB342641F98100263A99 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1833FB332641F98100263A99 /* sansation.ttf */; };
 		1833FB372641F99B00263A99 /* player-1-space-invaders-single-1979.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 1833FB362641F99B00263A99 /* player-1-space-invaders-single-1979.ogg */; };
 		1833FB432642AFF600263A99 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1833FB412642AFF600263A99 /* Menu.cpp */; };
+		188D994826564D7D0046E8F0 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 188D994726564D7D0046E8F0 /* menu.png */; };
+		188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188D994B26565D200046E8F0 /* space_invaders.ttf */; };
 		90B892DB2642BCAE00614A56 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B892D92642BCAE00614A56 /* Options.cpp */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		1833FB362641F99B00263A99 /* player-1-space-invaders-single-1979.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = "player-1-space-invaders-single-1979.ogg"; sourceTree = "<group>"; };
 		1833FB412642AFF600263A99 /* Menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		1833FB422642AFF600263A99 /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
+		188D994726564D7D0046E8F0 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		188D994B26565D200046E8F0 /* space_invaders.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_invaders.ttf; sourceTree = "<group>"; };
 		90B892D92642BCAE00614A56 /* Options.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Options.cpp; sourceTree = "<group>"; };
 		90B892DA2642BCAE00614A56 /* Options.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Options.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +101,9 @@
 		1833FB392641FAB500263A99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				188D994726564D7D0046E8F0 /* menu.png */,
 				1833FB332641F98100263A99 /* sansation.ttf */,
+				188D994B26565D200046E8F0 /* space_invaders.ttf */,
 				1833FB2F2641F92600263A99 /* space-invader.png */,
 				1833FB2C2641F88F00263A99 /* logo.png */,
 				1833FB362641F99B00263A99 /* player-1-space-invaders-single-1979.ogg */,
@@ -163,6 +169,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */,
+				188D994826564D7D0046E8F0 /* menu.png in Resources */,
 				1833FB372641F99B00263A99 /* player-1-space-invaders-single-1979.ogg in Resources */,
 				1833FB342641F98100263A99 /* sansation.ttf in Resources */,
 				1833FB302641F92600263A99 /* space-invader.png in Resources */,
