@@ -16,6 +16,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
+
 class State{
 protected:
     std::vector<sf::Texture> textures;

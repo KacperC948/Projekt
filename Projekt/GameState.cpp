@@ -1,35 +1,35 @@
 //
-//  Menu.cpp
+//  GameState.cpp
 //  Projekt
 //
-//  Created by KACPER on 05/05/2021.
+//  Created by Michał Wołoszyński on 23/05/2021.
 //  Copyright © 2021 KACPER. All rights reserved.
 //
 
-#include "Options.hpp"
+#include "GameState.hpp"
 
-Options::Options(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
+GameState::GameState(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
 {
     this->initGui();
     selectedItemIndex = 0;
 }
 
-Options::~Options()
+GameState::~GameState()
 {
     
 }
 
-void Options::drawText()
+void GameState::drawText()
 {
-    for (int i = 0; i < MAX_NUMBER_OF_ITEMS2; i++)
+    for (int i = 0; i < MAX_NUMBER_OF_ITEMS3; i++)
     {
         //window.draw(menu[i]);
     }
 }
 
-void Options::initGui(){
-    int width = 600;
-    int height = 648;
+void GameState::initGui(){
+    int width = 200;
+    int height = 200;
     
     background.setSize(Vector2f(width, height));
     background.setFillColor(sf::Color::Yellow);
@@ -37,26 +37,10 @@ void Options::initGui(){
     {
         // handle error
     }
-    text[0].setFont(font);
-    text[0].setColor(sf::Color::Green);
-    text[0].setString("Difficulty");
-    text[0].setPosition(200,300);
-    //text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 1));
     
-    text[1].setFont(font);
-    text[1].setColor(sf::Color::Green);
-    text[1].setString("Video mode");
-    text[1].setPosition(205,400);
-    //text[1].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 2));
-
-    text[2].setFont(font);
-    text[2].setColor(sf::Color::Green);
-    text[2].setString("Return");
-    text[2].setPosition(240,500);
-    //text[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 3));
 }
 
-void Options::MoveUp()
+void GameState::MoveUp()
 {
     if (selectedItemIndex - 1 >= 0)
     {
@@ -66,42 +50,37 @@ void Options::MoveUp()
     }
 }
 
-void Options::MoveDown()
+void GameState::MoveDown()
 {
-    if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS2)
-    {
-        text[selectedItemIndex].setColor(sf::Color::Green);
-        selectedItemIndex++;
-        text[selectedItemIndex].setColor(sf::Color::White);
-    }
+    background.move(0, -10);
 }
 
-void Options::update(){
+void GameState::update(){
     keyboardInput();
 }
 
-void Options::render(sf::RenderTarget* target){
+void GameState::render(sf::RenderTarget* target){
     if(!target)
         target = this->window;
     
-    sf::Texture texture;
-    texture.loadFromFile(resourcePath() + "menu.png");
+//    sf::Texture texture;
+//    texture.loadFromFile(resourcePath() + "menu.png");
 
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
+//    sf::Sprite sprite;
+//    sprite.setTexture(texture);
     
-    this->window->draw(sprite);
+    this->window->draw(background);
     //target->draw(this->background);
     for(int i = 0; i < 3; i++){
         target->draw(this->text[i]);
     }
 }
 
-void Options::endState(){
+void GameState::endState(){
     
 }
 
-void Options::keyboardInput(){
+void GameState::keyboardInput(){
     sf::Event e;
     bool test = true;
     
@@ -122,7 +101,8 @@ void Options::keyboardInput(){
                         cout << selectedItemIndex << endl;
                     }
                     if(e.key.code == sf::Keyboard::Down){
-                        MoveDown();
+                        //MoveDown();
+                        //background.move(0.f, -10.f);
                         cout << "dol";
                         cout << selectedItemIndex << endl;
                     }

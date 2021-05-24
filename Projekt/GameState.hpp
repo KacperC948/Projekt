@@ -1,28 +1,26 @@
 //
-//  Menu.hpp
+//  GameState.hpp
 //  Projekt
 //
-//  Created by KACPER on 05/05/2021.
+//  Created by Michał Wołoszyński on 23/05/2021.
 //  Copyright © 2021 KACPER. All rights reserved.
 //
 
-#ifndef Menu_hpp
-#define Menu_hpp
-//#define MAX_NUMBER_OF_ITEMS = 3;
+#ifndef GameState_hpp
+#define GameState_hpp
+
 
 #include "State.hpp"
-#include "Options.hpp"
-#include "GameState.hpp"
 
-const int MAX_NUMBER_OF_ITEMS = 3;
+const int MAX_NUMBER_OF_ITEMS3 = 3;
 
 using namespace std;
 using namespace sf;
 
-class Menu : public State{
+class GameState : public State{
 public:
-    Menu(sf::RenderWindow* window, std::stack<State*> *states);
-    ~Menu();
+    GameState(sf::RenderWindow* window, std::stack<State*>* states);
+    ~GameState();
     
     void drawText();
     void MoveUp();
@@ -39,12 +37,13 @@ public:
 private:
     int selectedItemIndex;
     sf::Font font;
-    sf::Text menu[MAX_NUMBER_OF_ITEMS];
+    //sf::Text menu[MAX_NUMBER_OF_ITEMS];
     
     sf::Text text[3];
     
+    
     sf::RectangleShape background;
-    //sf::Sprite background;
+
 };
 
-#endif /* Menu_hpp */
+#endif /* GameState_hpp */

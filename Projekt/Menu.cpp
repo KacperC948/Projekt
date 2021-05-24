@@ -116,24 +116,6 @@ void Menu::keyboardInput(){
     
     while(test){
         while (this->window->pollEvent(e)){
-            //if(e.type == sf::Event::KeyReleased){
-//            switch (e.key.code) {
-//                case sf::Keyboard::Return: {
-//                    return;
-//                }
-//                    break;
-//                case sf::Keyboard::Up:{
-//                    cout << "teścik";
-//                    MoveUp();
-//                    return;
-//                }
-//                    break;
-//                case sf::Keyboard::Down:{
-//                    cout << "teścik2";
-//                    MoveDown();
-//                    return;
-//                }
-//                    break;
             switch (e.type) {
                 case sf::Event::Closed:
                     this->window->close();
@@ -155,6 +137,9 @@ void Menu::keyboardInput(){
                     }
                     if(e.key.code == sf::Keyboard::Return){
                         cout << "enter";
+                        if(selectedItemIndex == 0){
+                            this->states->push(new GameState(this->window, this->states));
+                        }
                         if(selectedItemIndex == 1){
                             this->states->push(new Options(this->window, this->states));
                         }
