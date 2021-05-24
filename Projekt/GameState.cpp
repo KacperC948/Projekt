@@ -33,6 +33,8 @@ void GameState::initGui(){
     
     background.setSize(Vector2f(width, height));
     background.setFillColor(sf::Color::Yellow);
+    
+    background.setPosition(100, 100);
     if (!font.loadFromFile(resourcePath() + "space_invaders.ttf"))
     {
         // handle error
@@ -52,7 +54,7 @@ void GameState::MoveUp()
 
 void GameState::MoveDown()
 {
-    background.move(0, -10);
+    background.move(0, 0.5f);
 }
 
 void GameState::update(){
@@ -68,12 +70,9 @@ void GameState::render(sf::RenderTarget* target){
 
 //    sf::Sprite sprite;
 //    sprite.setTexture(texture);
-    
+    this->window->clear();
     this->window->draw(background);
-    //target->draw(this->background);
-    for(int i = 0; i < 3; i++){
-        target->draw(this->text[i]);
-    }
+
 }
 
 void GameState::endState(){
@@ -82,45 +81,21 @@ void GameState::endState(){
 
 void GameState::keyboardInput(){
     sf::Event e;
-    bool test = true;
     
-    while(test){
-        while (this->window->pollEvent(e)){
-            switch (e.type) {
-                case sf::Event::Closed:
-                    this->window->close();
-                    break;
-                case sf::Event::KeyPressed:
-                    if(e.key.code == sf::Keyboard::Escape){
-                        this->window->close();
-                        cout << "test";
-                    }
-                    if(e.key.code == sf::Keyboard::Up){
-                        MoveUp();
-                        cout << "gora";
-                        cout << selectedItemIndex << endl;
-                    }
-                    if(e.key.code == sf::Keyboard::Down){
-                        //MoveDown();
-                        //background.move(0.f, -10.f);
-                        cout << "dol";
-                        cout << selectedItemIndex << endl;
-                    }
-                    if(e.key.code == sf::Keyboard::Return){
-                        cout << "enter";
-                        if(selectedItemIndex == 1){
-                            cout << "opcje" << endl;
-                        }
-                        if(selectedItemIndex == 2){
-                            this->states->pop();
-                            cout << "opcje" << endl;
-                        }
-
-                    }
-                    //return;
-                    break;
-            }
-            return;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+        background.move(0, -0.5f);
+            cout << "test1" << endl;
         }
-    }
+        else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
+            background.move(0, 0.5f);
+            cout << "test2" << endl;
+        }
+        else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+            background.move(-0.5f, 0);
+            cout << "test2" << endl;
+        }
+        else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+            background.move(0.5f, 0);
+            cout << "test2" << endl;
+        }
 }

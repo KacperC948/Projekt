@@ -15,7 +15,7 @@ void Game::initVariables()
 
 void Game::initWindow()
 {
-    this->window = new sf::RenderWindow(sf::VideoMode(600, 648), "Space Invaders");
+    this->window = new sf::RenderWindow(sf::VideoMode(1000, 848), "Space Invaders");
 }
 
 Game::Game()

@@ -47,7 +47,7 @@ void Menu::initGui(){
         // handle error
     }
     text[0].setFont(font);
-    text[0].setColor(sf::Color::Green);
+    text[0].setColor(sf::Color::White);
     text[0].setString("Start");
     text[0].setPosition(245, 300);
     //text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
