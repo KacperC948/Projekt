@@ -10,8 +10,12 @@
 #define Player_hpp
 
 #include <stdio.h>
+#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
+#include "Bullet.hpp"
+
+using namespace std;
 
 class Player {
 public:
@@ -19,12 +23,14 @@ public:
     ~Player();
     
     void draw(sf::RenderTarget *target);
+    void drawBullet(sf::RenderTarget *target);
     void move();
+    void shot();
     
 private:
     sf::RectangleShape player;
     sf::Sprite p1;
-    
+    sf::RectangleShape bullet;
 };
 
 #endif /* Player_hpp */

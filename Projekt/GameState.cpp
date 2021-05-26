@@ -75,6 +75,7 @@ void GameState::render(sf::RenderTarget* target){
     this->window->clear();
     this->window->draw(background);
     this->p->draw(target);
+    //this->p->drawBullet(target);
     
 
 }

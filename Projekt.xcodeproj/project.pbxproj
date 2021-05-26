@@ -18,7 +18,8 @@
 		1833FB432642AFF600263A99 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1833FB412642AFF600263A99 /* Menu.cpp */; };
 		188D994826564D7D0046E8F0 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 188D994726564D7D0046E8F0 /* menu.png */; };
 		188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188D994B26565D200046E8F0 /* space_invaders.ttf */; };
-		900FC57E265E74100006EA54 /* Ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 900FC57D265E74100006EA54 /* Ship.png */; };
+		900FC584265E7DD10006EA54 /* Ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 900FC583265E7DD10006EA54 /* Ship.png */; };
+		900FC587265E85BC0006EA54 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 900FC585265E85BC0006EA54 /* Bullet.cpp */; };
 		90546A46265A88630083D07A /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90546A44265A88630083D07A /* GameState.cpp */; };
 		90859722265BBCB2008D3F31 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90859720265BBCB2008D3F31 /* Player.cpp */; };
 		90B892DB2642BCAE00614A56 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B892D92642BCAE00614A56 /* Options.cpp */; };
@@ -42,7 +43,9 @@
 		1833FB422642AFF600263A99 /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
 		188D994726564D7D0046E8F0 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		188D994B26565D200046E8F0 /* space_invaders.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_invaders.ttf; sourceTree = "<group>"; };
-		900FC57D265E74100006EA54 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
+		900FC583265E7DD10006EA54 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ship.png; path = ../../../../Downloads/Ship.png; sourceTree = "<group>"; };
+		900FC585265E85BC0006EA54 /* Bullet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bullet.cpp; sourceTree = "<group>"; };
+		900FC586265E85BC0006EA54 /* Bullet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bullet.hpp; sourceTree = "<group>"; };
 		90546A44265A88630083D07A /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		90546A45265A88630083D07A /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		90859720265BBCB2008D3F31 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				1833FB142641918000263A99 /* main.cpp */,
 				90859720265BBCB2008D3F31 /* Player.cpp */,
 				90859721265BBCB2008D3F31 /* Player.hpp */,
+				900FC585265E85BC0006EA54 /* Bullet.cpp */,
+				900FC586265E85BC0006EA54 /* Bullet.hpp */,
 				1808F35126493DBC000B79C9 /* Game.cpp */,
 				1808F35226493DBC000B79C9 /* Game.hpp */,
 				1833FB422642AFF600263A99 /* Menu.hpp */,
@@ -113,7 +118,7 @@
 		1833FB392641FAB500263A99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				900FC57D265E74100006EA54 /* Ship.png */,
+				900FC583265E7DD10006EA54 /* Ship.png */,
 				188D994726564D7D0046E8F0 /* menu.png */,
 				1833FB332641F98100263A99 /* sansation.ttf */,
 				188D994B26565D200046E8F0 /* space_invaders.ttf */,
@@ -182,10 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				900FC57E265E74100006EA54 /* Ship.png in Resources */,
 				188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */,
 				188D994826564D7D0046E8F0 /* menu.png in Resources */,
 				1833FB372641F99B00263A99 /* player-1-space-invaders-single-1979.ogg in Resources */,
+				900FC584265E7DD10006EA54 /* Ship.png in Resources */,
 				1833FB342641F98100263A99 /* sansation.ttf in Resources */,
 				1833FB302641F92600263A99 /* space-invader.png in Resources */,
 				1833FB2D2641F88F00263A99 /* logo.png in Resources */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90859722265BBCB2008D3F31 /* Player.cpp in Sources */,
+				900FC587265E85BC0006EA54 /* Bullet.cpp in Sources */,
 				90B892DB2642BCAE00614A56 /* Options.cpp in Sources */,
 				1833FB432642AFF600263A99 /* Menu.cpp in Sources */,
 				1833FB152641918000263A99 /* main.cpp in Sources */,
