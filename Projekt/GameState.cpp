@@ -34,6 +34,8 @@ void GameState::initGui(){
     background.setSize(Vector2f(width, height));
     background.setFillColor(sf::Color::Yellow);
     
+    
+    
     background.setPosition(100, 100);
     if (!font.loadFromFile(resourcePath() + "space_invaders.ttf"))
     {
@@ -58,7 +60,7 @@ void GameState::MoveDown()
 }
 
 void GameState::update(){
-    keyboardInput();
+    p->move();
 }
 
 void GameState::render(sf::RenderTarget* target){
@@ -72,6 +74,8 @@ void GameState::render(sf::RenderTarget* target){
 //    sprite.setTexture(texture);
     this->window->clear();
     this->window->draw(background);
+    this->p->draw(target);
+    
 
 }
 
@@ -80,22 +84,5 @@ void GameState::endState(){
 }
 
 void GameState::keyboardInput(){
-    sf::Event e;
-    
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        background.move(0, -0.5f);
-            cout << "test1" << endl;
-        }
-        else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-            background.move(0, 0.5f);
-            cout << "test2" << endl;
-        }
-        else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-            background.move(-0.5f, 0);
-            cout << "test2" << endl;
-        }
-        else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-            background.move(0.5f, 0);
-            cout << "test2" << endl;
-        }
+    p->move();
 }

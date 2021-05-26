@@ -11,6 +11,7 @@
 
 
 #include "State.hpp"
+#include "Player.hpp"
 
 const int MAX_NUMBER_OF_ITEMS3 = 3;
 
@@ -41,6 +42,9 @@ private:
     
     sf::Text text[3];
     
+    Player player;
+    
+    Player *p = new Player();
     
     sf::RectangleShape background;
 

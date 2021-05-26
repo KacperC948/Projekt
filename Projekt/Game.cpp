@@ -16,6 +16,7 @@ void Game::initVariables()
 void Game::initWindow()
 {
     this->window = new sf::RenderWindow(sf::VideoMode(1000, 848), "Space Invaders");
+    this->window->setFramerateLimit(300);
 }
 
 Game::Game()
