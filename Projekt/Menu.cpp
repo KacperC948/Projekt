@@ -28,8 +28,8 @@ void Menu::drawText()
 }
 
 void Menu::initGui(){
-    int width = 600;
-    int height = 648;
+    int width = 100;
+    int height = 848;
     
     //sf::Texture texture;
     //texture.loadFromFile(resourcePath() + "menu.png");
@@ -49,19 +49,19 @@ void Menu::initGui(){
     text[0].setFont(font);
     text[0].setColor(sf::Color::White);
     text[0].setString("Start");
-    text[0].setPosition(245, 300);
+    text[0].setPosition(440, 380);
     //text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 1));
     
     text[1].setFont(font);
     text[1].setColor(sf::Color::Green);
     text[1].setString("Options");
-    text[1].setPosition(230, 400);
+    text[1].setPosition(420, 450);
     //text[1].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 2));
 
     text[2].setFont(font);
     text[2].setColor(sf::Color::Green);
     text[2].setString("Exit");
-    text[2].setPosition(260, 500);
+    text[2].setPosition(455, 520);
     //text[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 1) * 3));
 }
 

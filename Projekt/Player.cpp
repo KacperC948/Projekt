@@ -22,35 +22,37 @@ Player::~Player(){
 
 void Player::draw(sf::RenderTarget *target){
     sf::Texture texture;
-    //sf::Texture texture1;
-    //texture1.loadFromFile(resourcePath() + "bullet.png");
     texture.loadFromFile(resourcePath() + "Ship.png");
-    //p1.setTexture(texture);
     player.setTexture(&texture);
-    
     target->draw(player);
     for(int i = 0; i < bullets.size(); i++){
+        bullets[i].initGui();
         target->draw(bullets[i].bullet);
         bullets[i].bullet.move(0.f, -7.f);
+        if(bullets[i].bullet.getPosition().y < 0){
+            bullets.erase(bullets.begin()+i);
+        }
     }
-    //target->draw(bullet);
 }
 
 void Player::move(){
     sf::Time time1 = clock1.getElapsedTime();
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-        player.move(-5.f, 0);
+        if(player.getPosition().x >= 0){
+            player.move(-5.f, 0);
+        }
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-        player.move(5.f, 0);
+        if(player.getPosition().x + player.getSize().x < 1000){
+            player.move(5.f, 0);
+        }
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
         if(clock1.getElapsedTime().asSeconds() > 0.3f){
-        shot();
-        clock1.restart();
+            shot();
+            clock1.restart();
         }
         cout << time1.asSeconds() << endl;
-        
     }
 }
 

@@ -30,7 +30,6 @@ public:
 private:
     sf::RectangleShape player;
     sf::Sprite p1;
-    //sf::RectangleShape bullet;
     
     std::vector<Bullet> bullets;
     

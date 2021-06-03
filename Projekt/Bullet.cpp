@@ -8,11 +8,12 @@
 
 #include "Bullet.hpp"
 
+
+
 Bullet::Bullet(float x, float y){
     bullet.setSize(sf::Vector2f(13, 45));
     bullet.setPosition(x, y);
-    
-    initGui();
+
 }
 
 Bullet::~Bullet(){
@@ -20,6 +21,6 @@ Bullet::~Bullet(){
 }
 
 void Bullet::initGui(){
-    this->t1.loadFromFile(resourcePath() + "bullet.png");
-    this->test.setTexture(this->t1);
+    t1.loadFromFile(resourcePath() + "bullet.png");
+    bullet.setTexture(&t1);
 }

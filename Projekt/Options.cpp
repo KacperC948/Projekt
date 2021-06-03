@@ -40,20 +40,17 @@ void Options::initGui(){
     text[0].setFont(font);
     text[0].setColor(sf::Color::White);
     text[0].setString("Difficulty");
-    text[0].setPosition(200,300);
-    //text[0].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 1));
+    text[0].setPosition(400,380);
     
     text[1].setFont(font);
     text[1].setColor(sf::Color::Green);
     text[1].setString("Video mode");
-    text[1].setPosition(205,400);
-    //text[1].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 2));
+    text[1].setPosition(405,450);
 
     text[2].setFont(font);
     text[2].setColor(sf::Color::Green);
     text[2].setString("Return");
-    text[2].setPosition(240,500);
-    //text[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS2 + 1) * 3));
+    text[2].setPosition(440,520);
 }
 
 void Options::MoveUp()
@@ -91,7 +88,6 @@ void Options::render(sf::RenderTarget* target){
     sprite.setTexture(texture);
     
     this->window->draw(sprite);
-    //target->draw(this->background);
     for(int i = 0; i < 3; i++){
         target->draw(this->text[i]);
     }

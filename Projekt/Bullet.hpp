@@ -22,7 +22,7 @@ public:
     sf::RectangleShape bullet;
     void initGui();
     
-    sf::Sprite test;
+
     sf::Texture t1;
     
 };

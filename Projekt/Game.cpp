@@ -37,7 +37,6 @@ const bool Game::running() const
     
     while(!this->states.empty()){
         delete this->states.top();
-        //this->states.pop();
     }
 }
 

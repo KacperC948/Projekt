@@ -31,8 +31,7 @@ void GameState::initGui(){
     int width = 200;
     int height = 200;
     
-    background.setSize(Vector2f(width, height));
-    background.setFillColor(sf::Color::Yellow);
+
     
     
     
@@ -67,17 +66,9 @@ void GameState::render(sf::RenderTarget* target){
     if(!target)
         target = this->window;
     
-//    sf::Texture texture;
-//    texture.loadFromFile(resourcePath() + "menu.png");
-
-//    sf::Sprite sprite;
-//    sprite.setTexture(texture);
     this->window->clear();
-    this->window->draw(background);
     this->p->draw(target);
-    //this->p->drawBullet(target);
     
-
 }
 
 void GameState::endState(){
