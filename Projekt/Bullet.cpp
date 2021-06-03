@@ -9,14 +9,17 @@
 #include "Bullet.hpp"
 
 Bullet::Bullet(float x, float y){
-    bullet.setSize(sf::Vector2f(50, 100));
+    bullet.setSize(sf::Vector2f(13, 45));
     bullet.setPosition(x, y);
+    
+    initGui();
 }
 
 Bullet::~Bullet(){
     
 }
 
-void Bullet::draw(sf::RenderTarget *target){
-    this->draw(target);
+void Bullet::initGui(){
+    this->t1.loadFromFile(resourcePath() + "bullet.png");
+    this->test.setTexture(this->t1);
 }

@@ -11,16 +11,20 @@
 
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
+#include "ResourcePath.hpp"
+#include <iostream>
 
 class Bullet {
-    
-    sf::RectangleShape bullet;
     
 public:
     Bullet(float x, float y);
     ~Bullet();
+    sf::RectangleShape bullet;
+    void initGui();
     
-    void draw(sf::RenderTarget *target);
+    sf::Sprite test;
+    sf::Texture t1;
+    
 };
 
 #endif /* Bullet_hpp */

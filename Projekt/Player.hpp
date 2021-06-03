@@ -30,7 +30,11 @@ public:
 private:
     sf::RectangleShape player;
     sf::Sprite p1;
-    sf::RectangleShape bullet;
+    //sf::RectangleShape bullet;
+    
+    std::vector<Bullet> bullets;
+    
+    sf::Clock clock1;
 };
 
 #endif /* Player_hpp */
