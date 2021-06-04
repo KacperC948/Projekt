@@ -22,9 +22,12 @@
 #include "Menu.hpp"
 #include "Options.hpp"
 #include "Game.hpp"
+#include <ctime>
 
 int main()
 {
+    srand (time(NULL));
+    
     Game game;
     game.run();
     

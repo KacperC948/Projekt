@@ -25,6 +25,8 @@
 		90859722265BBCB2008D3F31 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90859720265BBCB2008D3F31 /* Player.cpp */; };
 		90A441D22669037C0032EA7E /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A441D12669037C0032EA7E /* bullet.png */; };
 		90B892DB2642BCAE00614A56 /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90B892D92642BCAE00614A56 /* Options.cpp */; };
+		90F56997266A960800530CF3 /* Invaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90F56995266A960800530CF3 /* Invaders.cpp */; };
+		90F5699A266A9B6300530CF3 /* InvadersManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90F56998266A9B6300530CF3 /* InvadersManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +56,14 @@
 		90546A45265A88630083D07A /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
 		90859720265BBCB2008D3F31 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		90859721265BBCB2008D3F31 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		90877A16266934CA001519A6 /* Ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship.png; sourceTree = "<group>"; };
 		90A441D12669037C0032EA7E /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		90B892D92642BCAE00614A56 /* Options.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Options.cpp; sourceTree = "<group>"; };
 		90B892DA2642BCAE00614A56 /* Options.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Options.hpp; sourceTree = "<group>"; };
+		90F56995266A960800530CF3 /* Invaders.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Invaders.cpp; sourceTree = "<group>"; };
+		90F56996266A960800530CF3 /* Invaders.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Invaders.hpp; sourceTree = "<group>"; };
+		90F56998266A9B6300530CF3 /* InvadersManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InvadersManager.cpp; sourceTree = "<group>"; };
+		90F56999266A9B6300530CF3 /* InvadersManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InvadersManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +97,6 @@
 		1833FB0E2641918000263A99 /* Projekt */ = {
 			isa = PBXGroup;
 			children = (
-				90546A44265A88630083D07A /* GameState.cpp */,
-				90546A45265A88630083D07A /* GameState.hpp */,
 				1833FB112641918000263A99 /* ResourcePath.mm */,
 				1833FB132641918000263A99 /* ResourcePath.hpp */,
 				1833FB142641918000263A99 /* main.cpp */,
@@ -109,6 +114,12 @@
 				1833FB412642AFF600263A99 /* Menu.cpp */,
 				90B892D92642BCAE00614A56 /* Options.cpp */,
 				90B892DA2642BCAE00614A56 /* Options.hpp */,
+				90546A44265A88630083D07A /* GameState.cpp */,
+				90546A45265A88630083D07A /* GameState.hpp */,
+				90F56995266A960800530CF3 /* Invaders.cpp */,
+				90F56996266A960800530CF3 /* Invaders.hpp */,
+				90F56998266A9B6300530CF3 /* InvadersManager.cpp */,
+				90F56999266A9B6300530CF3 /* InvadersManager.hpp */,
 				1833FB0F2641918000263A99 /* Supporting Files */,
 			);
 			path = Projekt;
@@ -126,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				18073FD6266909B400649714 /* Ship.png */,
+				90877A16266934CA001519A6 /* Ship.png */,
 				90A441D12669037C0032EA7E /* bullet.png */,
 				188D994726564D7D0046E8F0 /* menu.png */,
 				1833FB332641F98100263A99 /* sansation.ttf */,
@@ -235,6 +247,7 @@
 			files = (
 				90859722265BBCB2008D3F31 /* Player.cpp in Sources */,
 				900FC587265E85BC0006EA54 /* Bullet.cpp in Sources */,
+				90F56997266A960800530CF3 /* Invaders.cpp in Sources */,
 				18073FDC2669164000649714 /* Enemy.cpp in Sources */,
 				90B892DB2642BCAE00614A56 /* Options.cpp in Sources */,
 				1833FB432642AFF600263A99 /* Menu.cpp in Sources */,
@@ -243,6 +256,7 @@
 				90546A46265A88630083D07A /* GameState.cpp in Sources */,
 				1808F35326493DBC000B79C9 /* Game.cpp in Sources */,
 				1808F35726494AB7000B79C9 /* State.cpp in Sources */,
+				90F5699A266A9B6300530CF3 /* InvadersManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

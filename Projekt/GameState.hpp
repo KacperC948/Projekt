@@ -12,6 +12,7 @@
 
 #include "State.hpp"
 #include "Player.hpp"
+#include "InvadersManager.hpp"
 
 const int MAX_NUMBER_OF_ITEMS3 = 3;
 
@@ -41,6 +42,8 @@ private:
     //sf::Text menu[MAX_NUMBER_OF_ITEMS];
     
     sf::Text text[3];
+    
+    InvadersManager invs;
     
     Player player;
     
