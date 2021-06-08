@@ -28,7 +28,7 @@ void Player::draw(sf::RenderTarget *target){
     for(int i = 0; i < bullets.size(); i++){
         bullets[i].initGui();
         target->draw(bullets[i].bullet);
-        bullets[i].bullet.move(0.f, -7.f);
+        bullets[i].bullet.move(0.f, -3.f);
         if(bullets[i].bullet.getPosition().y < 0){
             bullets.erase(bullets.begin()+i);
         }
@@ -48,11 +48,11 @@ void Player::move(){
         }
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
-        if(clock1.getElapsedTime().asSeconds() > 0.3f){
+        if(clock1.getElapsedTime().asSeconds() > 0.1f){
             shot();
             clock1.restart();
         }
-        cout << time1.asSeconds() << endl;
+        //cout << time1.asSeconds() << endl;
     }
 }
 

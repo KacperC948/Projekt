@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "ResourcePath.hpp"
 
 
 class Invaders {
@@ -22,7 +23,8 @@ public:
     
     void draw(sf::RenderTarget *target);
     void move();
-    
+    void initGui();
+    sf::Texture t;
     sf::RectangleShape shape;
 };
 

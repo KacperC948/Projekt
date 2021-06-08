@@ -26,7 +26,7 @@ public:
     void move();
     
     std::vector<Invaders> invs;
-    bool colision(std::vector<Bullet> &b);
+    void colision(std::vector<Bullet> &b);
 };
 
 #endif /* InvadersManager_hpp */

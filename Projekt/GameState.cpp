@@ -62,10 +62,10 @@ void GameState::update(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
         this->window->close();
     }
-    p->move();
+    player.move();
     invs.spawn();
     invs.move();
-    invs.colision(p->bullets);
+    invs.colision(player.bullets);
 }
 
 void GameState::render(sf::RenderTarget* target){
@@ -73,7 +73,7 @@ void GameState::render(sf::RenderTarget* target){
         target = this->window;
     
     this->window->clear();
-    this->p->draw(target);
+    this->player.draw(target);
     this->invs.draw(target);
     
 }
