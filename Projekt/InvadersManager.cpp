@@ -46,3 +46,19 @@ void InvadersManager::move(){
         invs[i].move();
     }
 }
+
+bool InvadersManager::colision(std::vector<Bullet> &b){
+    for(int i = 0; i < b.size(); i++)
+        for(int j = 0; j < invs.size(); j++){
+            if(b[i].bullet.getGlobalBounds().intersects(invs[j].shape.getGlobalBounds())){
+                std::cout << "BOOM" << std::endl;
+                std::cout << i << std::endl;
+                b.erase(b.begin()+1);
+                invs.erase(invs.begin()+j);
+                //b.erase(b.begin()+i);
+                return true;
+            } else {
+                return false;
+            }
+        }
+}

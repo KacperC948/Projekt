@@ -26,12 +26,12 @@ public:
     void drawBullet(sf::RenderTarget *target);
     void move();
     void shot();
-    
+    std::vector<Bullet> bullets;
 private:
     sf::RectangleShape player;
     sf::Sprite p1;
     
-    std::vector<Bullet> bullets;
+    //std::vector<Bullet> bullets;
     
     sf::Clock clock1;
 };

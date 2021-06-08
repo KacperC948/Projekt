@@ -65,6 +65,7 @@ void GameState::update(){
     p->move();
     invs.spawn();
     invs.move();
+    invs.colision(p->bullets);
 }
 
 void GameState::render(sf::RenderTarget* target){

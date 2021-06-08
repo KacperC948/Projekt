@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include "Invaders.hpp"
 #include <stdlib.h>
+#include "Bullet.hpp"
+#include <iostream>
 
 class InvadersManager {
     sf::Clock clock1;
@@ -24,6 +26,7 @@ public:
     void move();
     
     std::vector<Invaders> invs;
+    bool colision(std::vector<Bullet> &b);
 };
 
 #endif /* InvadersManager_hpp */
