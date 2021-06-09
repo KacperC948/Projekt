@@ -25,7 +25,7 @@ void InvadersManager::spawn(){
         invs.push_back(inv);
         //std::cout << x << std::endl;
     }
-    if(/*invs[0].shape.getPosition().y > 900 and */ clock1.getElapsedTime().asSeconds() > 0.4f){
+    if(/*invs[0].shape.getPosition().y > 900 and */ clock1.getElapsedTime().asSeconds() > 1.f){
         int x = rand() % 1000;
         Invaders inv(x, 0);
         invs.push_back(inv);
