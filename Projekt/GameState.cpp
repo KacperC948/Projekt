@@ -66,6 +66,12 @@ void GameState::update(){
     invs.spawn();
     invs.move();
     invs.colision(player.bullets);
+    if(invs.colisionWithP(player.returnPlayer()) == true){
+            this->states->push(new GameOver(this->window, this->states));
+        }
+        if(invs.invadersWin() == true){
+            this->states->push(new GameOver(this->window, this->states));
+        }
 }
 
 void GameState::render(sf::RenderTarget* target){

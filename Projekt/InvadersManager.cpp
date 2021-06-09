@@ -59,3 +59,29 @@ void InvadersManager::colision(std::vector<Bullet> &b){
             }
         }
 }
+
+bool InvadersManager::colisionWithP(sf::RectangleShape p){
+    for (size_t i = 0; i < invs.size(); i++){
+        if(p.getGlobalBounds().intersects(invs[i].shape.getGlobalBounds())){
+            std::cout << "game over" << std::endl;
+            return true;
+        }
+    }
+    return false;
+}
+
+
+bool InvadersManager::invadersWin(){
+    int win = 0;
+    //test
+    for(int i = 0; i < invs.size(); i++){
+        if(invs[i].shape.getPosition().y > 900){
+            win++;
+            std::cout << win << std::endl;
+        }
+    }
+    if(win == 3){
+        return true;
+    }
+    else return false;
+}

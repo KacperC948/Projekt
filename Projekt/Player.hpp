@@ -27,6 +27,7 @@ public:
     void move();
     void shot();
     std::vector<Bullet> bullets;
+    sf::RectangleShape returnPlayer();
 private:
     sf::RectangleShape player;
     sf::Sprite p1;

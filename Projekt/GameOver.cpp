@@ -21,7 +21,7 @@ GameOver::~GameOver()
 
 void GameOver::drawText()
 {
-    for (int i = 0; i < MAX_NUMBER_OF_ITEMS3; i++)
+    for (int i = 0; i < MAX_NUMBER_OF_ITEMS4; i++)
     {
         //window.draw(menu[i]);
     }
@@ -67,7 +67,7 @@ void GameOver::MoveUp()
 
 void GameOver::MoveDown()
 {
-    if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS3)
+    if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS4)
     {
         text[selectedItemIndex].setColor(sf::Color::Green);
         selectedItemIndex++;

@@ -27,6 +27,9 @@ public:
     
     std::vector<Invaders> invs;
     void colision(std::vector<Bullet> &b);
+    
+    bool invadersWin();
+    bool colisionWithP(sf::RectangleShape p);
 };
 
 #endif /* InvadersManager_hpp */

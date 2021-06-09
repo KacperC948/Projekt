@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "State.hpp"
 
-const int MAX_NUMBER_OF_ITEMS3 = 3;
+const int MAX_NUMBER_OF_ITEMS4 = 3;
 
 using namespace std;
 using namespace sf;

@@ -60,3 +60,7 @@ void Player::shot(){
     Bullet b1(player.getPosition().x + player.getSize().x / 2, player.getPosition().y);
     bullets.push_back(b1);
 }
+
+sf::RectangleShape Player::returnPlayer(){
+    return player;
+}
