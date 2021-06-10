@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include "State.hpp"
+#include "GameState.hpp"
+#include "Menu.hpp"
 
 const int MAX_NUMBER_OF_ITEMS4 = 3;
 
@@ -35,9 +37,9 @@ public:
     void endState();
     
 private:
-    int selectedItemIndex = 1;
+    int selectedItemIndex;
     Font font;
-    Text text[2];
+    Text text[3];
     RectangleShape background;
 };
 
