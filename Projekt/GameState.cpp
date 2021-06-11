@@ -41,16 +41,21 @@ void GameState::initGui(){
         // handle error
     }
     
+    text.setFont(font);
+    text.setColor(sf::Color::White);
+    text.setString("PAUSE");
+    text.setCharacterSize(120);
+    text.setPosition(300,300);
 }
 
 void GameState::MoveUp()
 {
-    if (selectedItemIndex - 1 >= 0)
-    {
-        text[selectedItemIndex].setColor(sf::Color::Green);
-        selectedItemIndex--;
-        text[selectedItemIndex].setColor(sf::Color::White);
-    }
+//    if (selectedItemIndex - 1 >= 0)
+//    {
+//        text[selectedItemIndex].setColor(sf::Color::Green);
+//        selectedItemIndex--;
+//        text[selectedItemIndex].setColor(sf::Color::White);
+//    }
 }
 
 void GameState::MoveDown()

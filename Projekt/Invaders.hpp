@@ -16,13 +16,12 @@
 
 
 class Invaders {
-    
 public:
     Invaders(int x, int y);
     ~Invaders();
     
     void draw(sf::RenderTarget *target);
-    void move();
+    void move(float speed);
     void initGui();
     sf::Texture t;
     sf::RectangleShape shape;

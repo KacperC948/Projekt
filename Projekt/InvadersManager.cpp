@@ -42,8 +42,13 @@ void InvadersManager::draw(sf::RenderTarget *target){
 }
 
 void InvadersManager::move(){
+    if(clock2.getElapsedTime().asSeconds() > 5){
+        speed = speed + 0.3f;
+        std::cout << speed << std::endl;
+        clock2.restart();
+    }
     for (int i = 0; i < invs.size(); i++) {
-        invs[i].move();
+        invs[i].move(speed);
     }
 }
 
@@ -51,8 +56,10 @@ void InvadersManager::colision(std::vector<Bullet> &b){
     for(size_t i = 0; i < b.size(); i++)
         for(size_t j = 0; j < invs.size(); j++){
             if(b[i].bullet.getGlobalBounds().intersects(invs[j].shape.getGlobalBounds())){
+                score++;
+                std::cout << score << std::endl;
                 std::cout << "BOOM" << std::endl;
-                std::cout << i << std::endl;
+                //std::cout << i << std::endl;
                 invs.erase(invs.begin()+j);
                 b.pop_back();
                 break;
@@ -77,11 +84,15 @@ bool InvadersManager::invadersWin(){
     for(int i = 0; i < invs.size(); i++){
         if(invs[i].shape.getPosition().y > 900){
             win++;
-            std::cout << win << std::endl;
+            //std::cout << win << std::endl;
         }
     }
     if(win == 3){
         return true;
     }
     else return false;
+}
+
+int InvadersManager::getScore(){
+    return score;
 }

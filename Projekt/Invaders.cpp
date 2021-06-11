@@ -26,8 +26,8 @@ void Invaders::draw(sf::RenderTarget *target){
 }
 
 
-void Invaders::move(){
-    shape.move(0.f, 1.3f);
+void Invaders::move(float speed){
+    shape.move(0.f, speed);
 }
 
 void Invaders::initGui(){

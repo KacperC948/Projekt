@@ -17,6 +17,12 @@
 
 class InvadersManager {
     sf::Clock clock1;
+    
+    sf::Clock clock2;
+    sf::Time time2 = clock2.getElapsedTime();
+    float speed = 1.f;
+    
+    int score = 0;
 public:
     InvadersManager();
     ~InvadersManager();
@@ -30,6 +36,8 @@ public:
     
     bool invadersWin();
     bool colisionWithP(sf::RectangleShape p);
+    
+    int getScore();
 };
 
 #endif /* InvadersManager_hpp */

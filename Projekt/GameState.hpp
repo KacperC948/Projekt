@@ -43,7 +43,7 @@ private:
     sf::Font font;
     //sf::Text menu[MAX_NUMBER_OF_ITEMS];
     
-    sf::Text text[3];
+    sf::Text text;
     
     InvadersManager invs;
     
