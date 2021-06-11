@@ -32,7 +32,7 @@ void InvadersManager::spawn(){
         //std::cout << x << std::endl;
         clock1.restart();
     }
-    //std::cout << time1.asSeconds() << std::endl;
+    std::cout << time1.asSeconds() << std::endl;
 }
 
 void InvadersManager::draw(sf::RenderTarget *target){
