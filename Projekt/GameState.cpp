@@ -60,7 +60,7 @@ void GameState::MoveDown()
 
 void GameState::update(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
-        this->window->close();
+        this->states->push(new Pause(this->window, this->states));
     }
     player.move();
     invs.spawn();

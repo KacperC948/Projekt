@@ -22,6 +22,8 @@
 		188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188D994B26565D200046E8F0 /* space_invaders.ttf */; };
 		18F76F292670F9B300CE8D3F /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F76F272670F9B300CE8D3F /* GameOver.cpp */; };
 		18F76F2C2670FE2400CE8D3F /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F76F2B2670FE2400CE8D3F /* gameOver.png */; };
+		18F76F3126724A9000CE8D3F /* Pause.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F76F2F26724A9000CE8D3F /* Pause.cpp */; };
+		18F76F3426724E7E00CE8D3F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F76F3326724E7E00CE8D3F /* pause.png */; };
 		900FC587265E85BC0006EA54 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 900FC585265E85BC0006EA54 /* Bullet.cpp */; };
 		904D76AE266FBA3500710F23 /* inv.png in Resources */ = {isa = PBXBuildFile; fileRef = 904D76AD266FBA3500710F23 /* inv.png */; };
 		90546A46265A88630083D07A /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90546A44265A88630083D07A /* GameState.cpp */; };
@@ -56,6 +58,9 @@
 		18F76F272670F9B300CE8D3F /* GameOver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOver.cpp; sourceTree = "<group>"; };
 		18F76F282670F9B300CE8D3F /* GameOver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOver.hpp; sourceTree = "<group>"; };
 		18F76F2B2670FE2400CE8D3F /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOver.png; sourceTree = "<group>"; };
+		18F76F2F26724A9000CE8D3F /* Pause.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pause.cpp; sourceTree = "<group>"; };
+		18F76F3026724A9000CE8D3F /* Pause.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pause.hpp; sourceTree = "<group>"; };
+		18F76F3326724E7E00CE8D3F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		900FC585265E85BC0006EA54 /* Bullet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bullet.cpp; sourceTree = "<group>"; };
 		900FC586265E85BC0006EA54 /* Bullet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bullet.hpp; sourceTree = "<group>"; };
 		904D76AD266FBA3500710F23 /* inv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inv.png; sourceTree = "<group>"; };
@@ -111,6 +116,8 @@
 				18073FDA2669164000649714 /* Enemy.cpp */,
 				18073FDB2669164000649714 /* Enemy.hpp */,
 				90859721265BBCB2008D3F31 /* Player.hpp */,
+				18F76F2F26724A9000CE8D3F /* Pause.cpp */,
+				18F76F3026724A9000CE8D3F /* Pause.hpp */,
 				900FC585265E85BC0006EA54 /* Bullet.cpp */,
 				900FC586265E85BC0006EA54 /* Bullet.hpp */,
 				1808F35126493DBC000B79C9 /* Game.cpp */,
@@ -145,6 +152,7 @@
 		1833FB392641FAB500263A99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18F76F3326724E7E00CE8D3F /* pause.png */,
 				18F76F2B2670FE2400CE8D3F /* gameOver.png */,
 				904D76AD266FBA3500710F23 /* inv.png */,
 				18073FD6266909B400649714 /* Ship.png */,
@@ -218,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F76F3426724E7E00CE8D3F /* pause.png in Resources */,
 				18F76F2C2670FE2400CE8D3F /* gameOver.png in Resources */,
 				904D76AE266FBA3500710F23 /* inv.png in Resources */,
 				18073FD7266909B400649714 /* Ship.png in Resources */,
@@ -268,6 +277,7 @@
 				1833FB122641918000263A99 /* ResourcePath.mm in Sources */,
 				18F76F292670F9B300CE8D3F /* GameOver.cpp in Sources */,
 				90546A46265A88630083D07A /* GameState.cpp in Sources */,
+				18F76F3126724A9000CE8D3F /* Pause.cpp in Sources */,
 				1808F35326493DBC000B79C9 /* Game.cpp in Sources */,
 				1808F35726494AB7000B79C9 /* State.cpp in Sources */,
 				90F5699A266A9B6300530CF3 /* InvadersManager.cpp in Sources */,

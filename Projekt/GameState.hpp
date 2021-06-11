@@ -14,6 +14,7 @@
 #include "Player.hpp"
 #include "InvadersManager.hpp"
 #include "GameOver.hpp"
+#include "Pause.hpp"
 
 const int MAX_NUMBER_OF_ITEMS3 = 3;
 
