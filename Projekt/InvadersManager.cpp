@@ -81,6 +81,7 @@ bool InvadersManager::colisionWithP(sf::RectangleShape p){
 bool InvadersManager::invadersWin(){
     int win = 0;
     //test
+    int test= 2;
     for(int i = 0; i < invs.size(); i++){
         if(invs[i].shape.getPosition().y > 900){
             win++;
@@ -95,4 +96,5 @@ bool InvadersManager::invadersWin(){
 
 int InvadersManager::getScore(){
     return score;
+    //datesda
 }
