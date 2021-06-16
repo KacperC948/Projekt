@@ -1,26 +1,25 @@
 //
-//  Menu.cpp
+//  VideoMode.cpp
 //  Projekt
 //
-//  Created by KACPER on 05/05/2021.
+//  Created by KACPER on 16/06/2021.
 //  Copyright © 2021 KACPER. All rights reserved.
 //
-//test
-#include "Options.hpp"
+
 #include "VideoOptions.hpp"
 
-Options::Options(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
+VideoOptions::VideoOptions(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
 {
     this->initGui();
     selectedItemIndex = 0;
 }
 
-Options::~Options()
+VideoOptions::~VideoOptions()
 {
     
 }
 
-void Options::drawText()
+void VideoOptions::drawText()
 {
     for (int i = 0; i < MAX_NUMBER_OF_ITEMS2; i++)
     {
@@ -28,7 +27,7 @@ void Options::drawText()
     }
 }
 
-void Options::initGui(){
+void VideoOptions::initGui(){
     int width = 600;
     int height = 648;
     
@@ -40,13 +39,13 @@ void Options::initGui(){
     }
     text[0].setFont(font);
     text[0].setColor(sf::Color::White);
-    text[0].setString("Difficulty");
-    text[0].setPosition(400,380);
+    text[0].setString("Full screen");
+    text[0].setPosition(390,380);
     
     text[1].setFont(font);
     text[1].setColor(sf::Color::Green);
-    text[1].setString("Video mode");
-    text[1].setPosition(405,450);
+    text[1].setString("Small");
+    text[1].setPosition(450,450);
 
     text[2].setFont(font);
     text[2].setColor(sf::Color::Green);
@@ -54,7 +53,7 @@ void Options::initGui(){
     text[2].setPosition(440,520);
 }
 
-void Options::MoveUp()
+void VideoOptions::MoveUp()
 {
     if (selectedItemIndex - 1 >= 0)
     {
@@ -64,7 +63,7 @@ void Options::MoveUp()
     }
 }
 
-void Options::MoveDown()
+void VideoOptions::MoveDown()
 {
     if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS2)
     {
@@ -74,11 +73,11 @@ void Options::MoveDown()
     }
 }
 
-void Options::update(){
+void VideoOptions::update(){
     keyboardInput();
 }
 
-void Options::render(sf::RenderTarget* target){
+void VideoOptions::render(sf::RenderTarget* target){
     if(!target)
         target = this->window;
     
@@ -94,11 +93,11 @@ void Options::render(sf::RenderTarget* target){
     }
 }
 
-void Options::endState(){
+void VideoOptions::endState(){
     
 }
 
-void Options::keyboardInput(){
+void VideoOptions::keyboardInput(){
     sf::Event e;
     bool test = true;
     
@@ -125,13 +124,15 @@ void Options::keyboardInput(){
                     }
                     if(e.key.code == sf::Keyboard::Return){
                         cout << "enter";
-                        if(selectedItemIndex == 1){
-                            this->states->push(new VideoOptions(this->window, this->states));
-                            cout << "opcje" << endl;
+                        if(selectedItemIndex == 0){ //FULSCREEN
+                            cout << "videoOptions fullscreen" << endl;
+                        }
+                        if(selectedItemIndex == 1){ //SMALL
+                            cout << "videoOptions small" << endl;
                         }
                         if(selectedItemIndex == 2){
                             this->states->pop();
-                            cout << "opcje" << endl;
+                            cout << "videoOptions return" << endl;
                         }
 
                     }

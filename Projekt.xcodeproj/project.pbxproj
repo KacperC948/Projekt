@@ -20,6 +20,7 @@
 		1833FB432642AFF600263A99 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1833FB412642AFF600263A99 /* Menu.cpp */; };
 		188D994826564D7D0046E8F0 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 188D994726564D7D0046E8F0 /* menu.png */; };
 		188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188D994B26565D200046E8F0 /* space_invaders.ttf */; };
+		18F55F5C267A1581005591B6 /* VideoOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F55F5A267A1581005591B6 /* VideoOptions.cpp */; };
 		18F76F292670F9B300CE8D3F /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F76F272670F9B300CE8D3F /* GameOver.cpp */; };
 		18F76F2C2670FE2400CE8D3F /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F76F2B2670FE2400CE8D3F /* gameOver.png */; };
 		18F76F3126724A9000CE8D3F /* Pause.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F76F2F26724A9000CE8D3F /* Pause.cpp */; };
@@ -54,6 +55,8 @@
 		1833FB422642AFF600263A99 /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
 		188D994726564D7D0046E8F0 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		188D994B26565D200046E8F0 /* space_invaders.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_invaders.ttf; sourceTree = "<group>"; };
+		18F55F5A267A1581005591B6 /* VideoOptions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VideoOptions.cpp; sourceTree = "<group>"; };
+		18F55F5B267A1581005591B6 /* VideoOptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VideoOptions.hpp; sourceTree = "<group>"; };
 		18F76F272670F9B300CE8D3F /* GameOver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOver.cpp; sourceTree = "<group>"; };
 		18F76F282670F9B300CE8D3F /* GameOver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOver.hpp; sourceTree = "<group>"; };
 		18F76F2B2670FE2400CE8D3F /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOver.png; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				900FC585265E85BC0006EA54 /* Bullet.cpp */,
 				900FC586265E85BC0006EA54 /* Bullet.hpp */,
 				1808F35126493DBC000B79C9 /* Game.cpp */,
+				18F55F5A267A1581005591B6 /* VideoOptions.cpp */,
+				18F55F5B267A1581005591B6 /* VideoOptions.hpp */,
 				1808F35226493DBC000B79C9 /* Game.hpp */,
 				1833FB422642AFF600263A99 /* Menu.hpp */,
 				1808F35526494AB7000B79C9 /* State.cpp */,
@@ -264,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90859722265BBCB2008D3F31 /* Player.cpp in Sources */,
+				18F55F5C267A1581005591B6 /* VideoOptions.cpp in Sources */,
 				900FC587265E85BC0006EA54 /* Bullet.cpp in Sources */,
 				90F56997266A960800530CF3 /* Invaders.cpp in Sources */,
 				18073FDC2669164000649714 /* Enemy.cpp in Sources */,
