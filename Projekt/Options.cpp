@@ -8,6 +8,7 @@
 //test
 #include "Options.hpp"
 #include "VideoOptions.hpp"
+#include "Difficulty.hpp"
 
 Options::Options(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
 {
@@ -125,6 +126,10 @@ void Options::keyboardInput(){
                     }
                     if(e.key.code == sf::Keyboard::Return){
                         cout << "enter";
+                        if(selectedItemIndex == 0){
+                            this->states->push(new Difficulty(this->window, this->states));
+                            cout << "opcje" << endl;
+                        }
                         if(selectedItemIndex == 1){
                             this->states->push(new VideoOptions(this->window, this->states));
                             cout << "opcje" << endl;

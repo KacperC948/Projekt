@@ -21,6 +21,8 @@
 		188D994826564D7D0046E8F0 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 188D994726564D7D0046E8F0 /* menu.png */; };
 		188D994C26565D200046E8F0 /* space_invaders.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 188D994B26565D200046E8F0 /* space_invaders.ttf */; };
 		18F55F5C267A1581005591B6 /* VideoOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F55F5A267A1581005591B6 /* VideoOptions.cpp */; };
+		18F55F65267A3200005591B6 /* scores.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18F55F64267A3200005591B6 /* scores.txt */; };
+		18F55F6A267A3E2D005591B6 /* Difficulty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F55F68267A3E2D005591B6 /* Difficulty.cpp */; };
 		18F76F292670F9B300CE8D3F /* GameOver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F76F272670F9B300CE8D3F /* GameOver.cpp */; };
 		18F76F2C2670FE2400CE8D3F /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F76F2B2670FE2400CE8D3F /* gameOver.png */; };
 		18F76F3126724A9000CE8D3F /* Pause.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18F76F2F26724A9000CE8D3F /* Pause.cpp */; };
@@ -57,6 +59,9 @@
 		188D994B26565D200046E8F0 /* space_invaders.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = space_invaders.ttf; sourceTree = "<group>"; };
 		18F55F5A267A1581005591B6 /* VideoOptions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VideoOptions.cpp; sourceTree = "<group>"; };
 		18F55F5B267A1581005591B6 /* VideoOptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VideoOptions.hpp; sourceTree = "<group>"; };
+		18F55F64267A3200005591B6 /* scores.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = scores.txt; sourceTree = "<group>"; };
+		18F55F68267A3E2D005591B6 /* Difficulty.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Difficulty.cpp; sourceTree = "<group>"; };
+		18F55F69267A3E2D005591B6 /* Difficulty.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Difficulty.hpp; sourceTree = "<group>"; };
 		18F76F272670F9B300CE8D3F /* GameOver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameOver.cpp; sourceTree = "<group>"; };
 		18F76F282670F9B300CE8D3F /* GameOver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameOver.hpp; sourceTree = "<group>"; };
 		18F76F2B2670FE2400CE8D3F /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameOver.png; sourceTree = "<group>"; };
@@ -133,6 +138,8 @@
 				18F76F272670F9B300CE8D3F /* GameOver.cpp */,
 				18F76F282670F9B300CE8D3F /* GameOver.hpp */,
 				90B892DA2642BCAE00614A56 /* Options.hpp */,
+				18F55F68267A3E2D005591B6 /* Difficulty.cpp */,
+				18F55F69267A3E2D005591B6 /* Difficulty.hpp */,
 				90546A44265A88630083D07A /* GameState.cpp */,
 				90546A45265A88630083D07A /* GameState.hpp */,
 				90F56995266A960800530CF3 /* Invaders.cpp */,
@@ -155,6 +162,7 @@
 		1833FB392641FAB500263A99 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18F55F64267A3200005591B6 /* scores.txt */,
 				18F76F2B2670FE2400CE8D3F /* gameOver.png */,
 				904D76AD266FBA3500710F23 /* inv.png */,
 				18073FD6266909B400649714 /* Ship.png */,
@@ -228,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F55F65267A3200005591B6 /* scores.txt in Resources */,
 				18F76F2C2670FE2400CE8D3F /* gameOver.png in Resources */,
 				904D76AE266FBA3500710F23 /* inv.png in Resources */,
 				18073FD7266909B400649714 /* Ship.png in Resources */,
@@ -270,6 +279,7 @@
 			files = (
 				90859722265BBCB2008D3F31 /* Player.cpp in Sources */,
 				18F55F5C267A1581005591B6 /* VideoOptions.cpp in Sources */,
+				18F55F6A267A3E2D005591B6 /* Difficulty.cpp in Sources */,
 				900FC587265E85BC0006EA54 /* Bullet.cpp in Sources */,
 				90F56997266A960800530CF3 /* Invaders.cpp in Sources */,
 				18073FDC2669164000649714 /* Enemy.cpp in Sources */,

@@ -20,9 +20,9 @@ const int MAX_NUMBER_OF_ITEMS4 = 3;
 using namespace std;
 using namespace sf;
 
-class GameOver : public State {
+class GameOver : public State, public InvadersManager {
 public:
-    GameOver(sf::RenderWindow* window, std::stack<State*>* states);
+    GameOver(sf::RenderWindow* window, std::stack<State*>* states, int score);
     ~GameOver();
     
     void drawText();
@@ -38,9 +38,10 @@ public:
     void endState();
     
 private:
+    int score2;
     int selectedItemIndex;
     Font font;
-    Text text[4];
+    Text text[5];
     RectangleShape background;
 };
 

@@ -93,10 +93,10 @@ void GameState::update(){
     invs.move();
     invs.colision(player.bullets);
     if(invs.colisionWithP(player.returnPlayer()) == true){
-            this->states->push(new GameOver(this->window, this->states));
+            this->states->push(new GameOver(this->window, this->states ,this->getScore2()));
         }
         if(invs.invadersWin() == true){
-            this->states->push(new GameOver(this->window, this->states));
+            this->states->push(new GameOver(this->window, this->states,this->getScore2()));
         }
 }
 

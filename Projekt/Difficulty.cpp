@@ -1,34 +1,33 @@
 //
-//  GameOver.cpp
+//  Difficulty.cpp
 //  Projekt
 //
-//  Created by KACPER on 09/06/2021.
+//  Created by KACPER on 16/06/2021.
 //  Copyright © 2021 KACPER. All rights reserved.
 //
 
-#include "GameOver.hpp"
+#include "Difficulty.hpp"
 
-GameOver::GameOver(sf::RenderWindow* window, std::stack<State*>* states, int score) : score2(score), State(window, states) 
+Difficulty::Difficulty(sf::RenderWindow* window, std::stack<State*>* states) : State(window, states)
 {
     this->initGui();
-    selectedItemIndex = 1;
-    
+    selectedItemIndex = 0;
 }
 
-GameOver::~GameOver()
+Difficulty::~Difficulty()
 {
     
 }
 
-void GameOver::drawText()
+void Difficulty::drawText()
 {
-    for (int i = 0; i < MAX_NUMBER_OF_ITEMS4; i++)
+    for (int i = 0; i < MAX_NUMBER_OF_ITEMS10; i++)
     {
         //window.draw(menu[i]);
     }
 }
 
-void GameOver::initGui(){
+void Difficulty::initGui(){
     int width = 600;
     int height = 648;
     
@@ -38,80 +37,67 @@ void GameOver::initGui(){
     {
         // handle error
     }
-    
     text[0].setFont(font);
     text[0].setColor(sf::Color::White);
-    text[0].setString("Do you want to play again?");
-    text[0].setPosition(250,430);
+    text[0].setString("NORMAL");
+    text[0].setPosition(440,380);
     
     text[1].setFont(font);
     text[1].setColor(sf::Color::Green);
-    text[1].setString("Yes");
-    text[1].setPosition(450,500);
-    
+    text[1].setString("HARD");
+    text[1].setPosition(460,450);
+
     text[2].setFont(font);
-    text[2].setColor(sf::Color::White);
-    text[2].setString("No");
-    text[2].setPosition(460,590);
-    
-    text[3].setFont(font);
-    text[3].setColor(sf::Color::White);
-    text[3].setString("Your score: ");
-    text[3].setPosition(300,690);
-    
-    text[4].setFont(font);
-    text[4].setColor(sf::Color::White);
-    std::string test = std::to_string(score2);
-    text[4].setString(test);
-    text[4].setPosition(550,690);
-
+    text[2].setColor(sf::Color::Green);
+    text[2].setString("RETURN");
+    text[2].setPosition(440,520);
 }
 
-void GameOver::MoveUp()
+void Difficulty::MoveUp()
 {
-    if (selectedItemIndex - 2 >= 0)
+    if (selectedItemIndex - 1 >= 0)
     {
-        text[selectedItemIndex].setColor(sf::Color::White);
+        text[selectedItemIndex].setColor(sf::Color::Green);
         selectedItemIndex--;
-        text[selectedItemIndex].setColor(sf::Color::Green);
-    }
-}
-
-void GameOver::MoveDown()
-{
-    if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS4)
-    {
         text[selectedItemIndex].setColor(sf::Color::White);
-        selectedItemIndex++;
-        text[selectedItemIndex].setColor(sf::Color::Green);
     }
 }
 
-void GameOver::update(){
+void Difficulty::MoveDown()
+{
+    if (selectedItemIndex + 1 < MAX_NUMBER_OF_ITEMS10)
+    {
+        text[selectedItemIndex].setColor(sf::Color::Green);
+        selectedItemIndex++;
+        text[selectedItemIndex].setColor(sf::Color::White);
+    }
+}
+
+void Difficulty::update(){
     keyboardInput();
 }
 
-void GameOver::render(sf::RenderTarget* target){
+void Difficulty::render(sf::RenderTarget* target){
     if(!target)
         target = this->window;
     
     sf::Texture texture;
-    texture.loadFromFile(resourcePath() + "gameOver.png");
+    texture.loadFromFile(resourcePath() + "menu.png");
 
     sf::Sprite sprite;
     sprite.setTexture(texture);
     
     this->window->draw(sprite);
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 3; i++){
         target->draw(this->text[i]);
     }
 }
 
-void GameOver::endState(){
+void Difficulty::endState(){
     
 }
 
-void GameOver::keyboardInput(){
+void Difficulty::keyboardInput(){
     sf::Event e;
     bool test = true;
     
@@ -139,16 +125,11 @@ void GameOver::keyboardInput(){
                     if(e.key.code == sf::Keyboard::Return){
                         cout << "enter";
                         if(selectedItemIndex == 1){
-                            this->states->pop();
-                            this->states->pop();
-                            this->states->push(new GameState(this->window,this->states));
+                            //this->states->push(new VideoOptions(this->window, this->states));
                             cout << "opcje" << endl;
                         }
                         if(selectedItemIndex == 2){
                             this->states->pop();
-                            this->states->pop();
-                            this->states->pop();
-                            this->states->push(new Menu(this->window,this->states));
                             cout << "opcje" << endl;
                         }
 
