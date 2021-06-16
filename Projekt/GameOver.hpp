@@ -13,6 +13,7 @@
 #include "State.hpp"
 #include "GameState.hpp"
 #include "Menu.hpp"
+#include "InvadersManager.hpp"
 
 const int MAX_NUMBER_OF_ITEMS4 = 3;
 
@@ -39,7 +40,7 @@ public:
 private:
     int selectedItemIndex;
     Font font;
-    Text text[3];
+    Text text[4];
     RectangleShape background;
 };
 

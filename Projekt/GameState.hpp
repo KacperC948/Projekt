@@ -15,6 +15,7 @@
 #include "InvadersManager.hpp"
 #include "GameOver.hpp"
 #include "Pause.hpp"
+#include <string>
 
 const int MAX_NUMBER_OF_ITEMS3 = 3;
 
@@ -38,20 +39,22 @@ public:
     void update(sf::Event ev);
     void render(sf::RenderTarget* target=nullptr);
     void endState();
+    int getScore2();
+    
 private:
     int selectedItemIndex;
     sf::Font font;
     //sf::Text menu[MAX_NUMBER_OF_ITEMS];
     
-    sf::Text text;
-    
+    sf::Text text[4];
     InvadersManager invs;
-    
     Player player;
     
     Player *p = new Player();
     
     sf::RectangleShape background;
+    
+    int lifes = 0;
 
 };
 

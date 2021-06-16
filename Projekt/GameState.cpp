@@ -40,12 +40,29 @@ void GameState::initGui(){
     {
         // handle error
     }
+    std::string s = std::to_string(invs.getWin());
+    text[0].setFont(font);
+    text[0].setColor(sf::Color::White);
+    text[0].setString(s);
+    text[0].setCharacterSize(30);
+    text[0].setPosition(130, 0);
+    text[1].setFont(font);
+    text[1].setColor(sf::Color::White);
+    text[1].setString("Lifes: ");
+    text[1].setCharacterSize(30);
+    text[1].setPosition(10, 0);
     
-    text.setFont(font);
-    text.setColor(sf::Color::White);
-    text.setString("PAUSE");
-    text.setCharacterSize(120);
-    text.setPosition(300,300);
+    text[2].setFont(font);
+    text[2].setColor(sf::Color::White);
+    text[2].setString("Score: ");
+    text[2].setCharacterSize(30);
+    text[2].setPosition(780, 0);
+    std::string s1 = std::to_string(invs.getScore());
+    text[3].setFont(font);
+    text[3].setColor(sf::Color::White);
+    text[3].setString(s1);
+    text[3].setCharacterSize(30);
+    text[3].setPosition(910, 0);
 }
 
 void GameState::MoveUp()
@@ -67,6 +84,10 @@ void GameState::update(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
         this->states->push(new Pause(this->window, this->states));
     }
+    std::string s = std::to_string(invs.getWin());
+    std::string s1 = std::to_string(invs.getScore());
+    text[0].setString(s);
+    text[3].setString(s1);
     player.move();
     invs.spawn();
     invs.move();
@@ -86,6 +107,9 @@ void GameState::render(sf::RenderTarget* target){
     this->window->clear();
     this->player.draw(target);
     this->invs.draw(target);
+    for(int i = 0; i < 4; i++){
+        target->draw(this->text[i]);
+    }
     
 }
 
@@ -95,4 +119,8 @@ void GameState::endState(){
 
 void GameState::keyboardInput(){
     p->move();
+}
+
+int GameState::getScore2(){
+    return invs.getScore();
 }

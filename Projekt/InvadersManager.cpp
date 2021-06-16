@@ -26,7 +26,7 @@ void InvadersManager::spawn(){
         //std::cout << x << std::endl;
     }
     if(/*invs[0].shape.getPosition().y > 900 and */ clock1.getElapsedTime().asSeconds() > 1.f){
-        int x = rand() % 1000;
+        int x = rand() % 848;
         Invaders inv(x, 0);
         invs.push_back(inv);
         //std::cout << x << std::endl;
@@ -79,22 +79,27 @@ bool InvadersManager::colisionWithP(sf::RectangleShape p){
 
 
 bool InvadersManager::invadersWin(){
-    int win = 0;
     //test
     int test= 2;
     for(int i = 0; i < invs.size(); i++){
         if(invs[i].shape.getPosition().y > 900){
-            win++;
-            //std::cout << win << std::endl;
+            win--;
+            invs.erase(invs.begin()+i);
+            std::cout << win << std::endl;
         }
     }
-    if(win == 3){
+    if(win == 0){
         return true;
     }
     else return false;
 }
 
 int InvadersManager::getScore(){
-    return score;
+    //score = score*50;
+    return score*25;
     //datesda
+}
+
+int InvadersManager::getWin(){
+    return win;
 }

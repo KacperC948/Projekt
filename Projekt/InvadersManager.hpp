@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include "Bullet.hpp"
 #include <iostream>
+#include <string>
 
 class InvadersManager {
     sf::Clock clock1;
@@ -21,7 +22,7 @@ class InvadersManager {
     sf::Clock clock2;
     sf::Time time2 = clock2.getElapsedTime();
     float speed = 1.f;
-    
+    int win = 3;
     int score = 0;
 public:
     InvadersManager();
@@ -38,6 +39,9 @@ public:
     bool colisionWithP(sf::RectangleShape p);
     
     int getScore();
+    int getWin();
+    
+    std::string scoreToString();
 };
 
 #endif /* InvadersManager_hpp */

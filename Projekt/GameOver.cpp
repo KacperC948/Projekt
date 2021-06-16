@@ -12,6 +12,7 @@ GameOver::GameOver(sf::RenderWindow* window, std::stack<State*>* states) : State
 {
     this->initGui();
     selectedItemIndex = 1;
+    
 }
 
 GameOver::~GameOver()
@@ -52,6 +53,12 @@ void GameOver::initGui(){
     text[2].setColor(sf::Color::White);
     text[2].setString("No");
     text[2].setPosition(460,590);
+    
+//    text[3].setFont(font);
+//    text[3].setColor(sf::Color::White);
+//    string test = GameState::getScore2();
+//    text[3].setString(test);
+//    text[3].setPosition(460,690);
 
 }
 
@@ -90,7 +97,7 @@ void GameOver::render(sf::RenderTarget* target){
     sprite.setTexture(texture);
     
     this->window->draw(sprite);
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i < 4; i++){
         target->draw(this->text[i]);
     }
 }
